@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link href="/static/css/tailwind.css" rel="stylesheet"><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-high active:scale-95 transition-all" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><img alt="Brand logo. - Primary color: #7c3aed
+- Font: plusJakartaSans
+- Mode: dark
+- Roundness: rounded-md
+" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XqsLzYcqdg-NlX-G1aqrzSNnYozq7Wv0r-3NbMB9sq9cOnuJyDySSPjXntPDxcoeoY7-Tv6de6ZANIK1rqpCYK8KZs2otI0V37kjf9BUj5YwwPtlxpT3c9BAxd3zqprXn6wfuFDyAoufVmGLA3CotajyQ51ypCW24zE9tYjW47jbtJoXDAW4UGSSRl1ZZoNrT1jTfQUPLV6r0zpvC45Qjc_jJC3WtTLxj9_g1HZy1Jc3rDuHIF6BErUg"/><h1 class="font-headline-md text-headline-md text-on-surface truncate max-w-[160px]">Marketing Hero</h1></div><div class="flex items-center gap-space-sm"><a class="h-9 px-3 rounded-lg bg-surface-container-high text-secondary hover:bg-surface-container-highest flex items-center justify-center font-label-pill text-label-pill transition-colors" data-path="sign-in" href="#">Sign In</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1X1NTif8mbCf3mPK4GavUwUDldwrvAfL3UX10VM8mnWKCONY5xPpdb3W7SYuAkh4o_pCit2-rND6TfTIvgnps-FWOOQi7xLYIj6B2MTrQ7m-kvzYANCn_RkBc5vDEqNW8Pv00GSnuq_PT1P2slSHeo65i1srtycLx0MJRinXE6Nr35wT2UATqR2BCwIcTTRxoIPm6xVidknM-5zLxbu6btks6xrKbEwp0jw6FEPJsYVAXcWvNdHXZuJMw"/></div><button id="logout-btn" class="ml-2 px-2 py-1 text-sm text-on-surface-variant hover:text-on-surface">Logout</button></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<section class="relative px-margin-mobile pt-space-md pb-space-lg overflow-hidden">
+<div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute top-20 -right-10 w-52 h-52 rounded-full bg-secondary/15 blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col items-center text-center gap-space-sm">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">bolt</span>
+<span class="font-label-pill text-label-pill tracking-wide bg-gradient-to-r from-secondary via-primary to-secondary-fixed bg-clip-text text-transparent">Meet AI Clipping 3.0 • Faster, Smarter, Viral</span>
+</div>
+<h1 class="font-display-mobile text-display-mobile tracking-tight text-on-background mt-1">
+        Turn 1 Long Video Into <span class="bg-gradient-to-r from-secondary via-primary-fixed-dim to-secondary-container bg-clip-text text-transparent">10 Viral Shorts</span> in 60s!
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mx-auto">
+        Drop any podcast, stream, or webinar URL and watch AI extract punchy hooks with neon kinetic subtitles.
+      </p>
+<div class="w-full mt-space-sm flex flex-col gap-space-xs">
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl p-1 shadow-lg">
+<span class="material-symbols-outlined text-outline pl-2.5 text-[20px]">link</span>
+<input class="w-full bg-transparent py-2.5 pl-2 pr-3 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" id="video-url-input" placeholder="https://youtube.com/watch?v=..." type="url" value="https://youtube.com/watch?v=dQw4w9WgXcQ"/>
+</div>
+<button class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-on-primary font-headline-md text-headline-md flex items-center justify-center gap-2 shadow-xl active:scale-[0.98] transition-transform" id="try-btn">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+<span>Try Free Clip (No Signup Req)</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 pt-1 overflow-x-auto w-full no-scrollbar justify-center">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Try Demo:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-pill text-label-pill active:bg-surface-container-highest transition-colors" onclick="setSample('https://youtube.com/watch?v=sample-rogan')">🎙️ Rogan #2144</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-pill text-label-pill active:bg-surface-container-highest transition-colors" onclick="setSample('https://youtube.com/watch?v=sample-fridman')">💻 Lex &amp; Altman</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-pill text-label-pill active:bg-surface-container-highest transition-colors" onclick="setSample('https://twitch.tv/videos/sample-kai')">🎮 Kai Stream</button>
+</div>
+</div>
+</section>
+<section class="px-margin-mobile py-space-sm">
+<div class="relative w-full rounded-2xl bg-surface-container-low p-3 shadow-xl overflow-hidden">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-mono text-label-mono text-tertiary uppercase">AI Multi-Reframing Matrix</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-on-tertiary-container">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span class="font-readout-num text-readout-num font-bold">98% VIRAL SCORE</span>
+</div>
+</div>
+<div class="relative w-full grid grid-cols-12 gap-2">
+<div class="col-span-5 flex flex-col justify-center rounded-xl bg-surface-container-lowest p-2 relative overflow-hidden">
+<div class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[9px]">16:9 RAW</div>
+<img class="w-full h-24 object-cover rounded opacity-40" data-alt="Boring muted wide camera angle shot of two tech podcast hosts sitting in a dark studio across an acoustic desk with low saturation and small text, cinematic framing, tech lighting, moody atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATFB4TAJipI_rnAI61OCKdQIB7sI-lO21C9WqujRyBmHqKMmgTgRRwheSE1dbS6Z88cD7QE4ysten7V7112UvGcGJDu2QcIQ4yxJrS6RRMjUhOvkgu6Dr-ICI_XyM5PjqCZ5p_9cQGE9CcqI9yQ9w593eOx3iIHiqXWXHNop4z7rrctEx3JFcwO1lseYg_nfZRXSiDboIvCn76rFYmdl4lZujfJ7GyfBp4WC4a3OEDrFuupb4WvV1l"/>
+<div class="flex items-center justify-center gap-1 text-on-surface-variant text-[10px] mt-1 font-label-pill">
+<span class="material-symbols-outlined text-[12px] text-error">hourglass_bottom</span> Dull Monologue
+          </div>
+</div>
+<div class="col-span-2 flex flex-col items-center justify-center">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">arrow_forward</span>
+</div>
+<span class="font-label-mono text-[9px] text-secondary mt-1">AI CROP</span>
+</div>
+<div class="col-span-5 rounded-xl bg-surface-container-high p-1.5 relative overflow-hidden flex flex-col items-center shadow-inner">
+<div class="absolute top-1 right-1 z-10 px-1.5 py-0.5 rounded bg-primary-container text-on-primary font-label-pill text-[9px]">9:16 VERTICAL</div>
+<div class="relative w-full aspect-[9/14] rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Vibrant ultra sharp 9:16 portrait format close up of energetic tech creator speaking passionately with dynamic cinematic blue and violet neon studio backlighting, high detail expressive gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHb7w6xmzRSLczynXCQ-sFei-J3NfkU1861Jh4nHKnH5V3fG1WP1glT30ockr3Rb5RynXhPSG2js2j4dIoP-WMUdcdN0KSBQgQVz3U5-v-O7R3pHCWaLOX5PQREE9x9_600n35M0hIGlJE-9HzwTKivq2hbvU3wP73WcWmOCyRlDI0sq2KwLrJ3ozrK-Sewx00wDyiXdOYdgnMSH2O5weyefTuHKPiRYeKJTtf1HTn4cNQZkCMbCnH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-1 right-1 text-center flex flex-col items-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-lowest text-secondary-fixed font-headline-md text-[11px] font-black uppercase tracking-wider transform -rotate-1 shadow-md">
+                HOW TO SCALE TO
+              </span>
+<span class="inline-block px-2 py-0.5 rounded bg-secondary text-on-secondary font-headline-md text-[13px] font-black uppercase tracking-wide transform rotate-1 mt-0.5 shadow-md">
+                $100K / MONTH
+              </span>
+</div>
+<div class="absolute bottom-1 left-2 right-2 flex items-center justify-between text-[8px] font-readout-num text-on-surface-variant">
+<span class="flex items-center gap-0.5 text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 00:28.4</span>
+<div class="flex items-end gap-0.5 h-2.5">
+<div class="w-0.5 h-1 bg-secondary rounded-full"></div>
+<div class="w-0.5 h-2 bg-secondary rounded-full"></div>
+<div class="w-0.5 h-2.5 bg-primary rounded-full"></div>
+<div class="w-0.5 h-1.5 bg-secondary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-2.5 pt-2 flex items-center justify-between bg-surface-container rounded-xl px-3 py-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">graphic_eq</span>
+<span class="font-label-pill text-label-pill text-on-surface">Auto-cut punchline identified at 14:22</span>
+</div>
+<span class="font-readout-num text-readout-num text-tertiary">+340% Viral Lift</span>
+</div>
+</div>
+</section>
+<section class="px-margin-mobile py-space-md flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Supercharged Workflow</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">Engineered for Rapid Viral Reach</h2>
+</div>
+<div class="rounded-2xl bg-surface-container p-space-md shadow-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-error-container/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">center_focus_strong</span>
+</div>
+<span class="font-label-mono text-label-mono text-error px-2 py-0.5 rounded-full bg-error-container/20">RETINAL AI</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Retinal Hook Detection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Our neural graph monitors biometric retention curves, scanning dialogue cadence and vocal climax to snag viewers in the first 3 seconds.
+      </p>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-error rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-container p-space-md shadow-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">subtitles</span>
+</div>
+<span class="font-label-mono text-label-mono text-secondary px-2 py-0.5 rounded-full bg-secondary-container/20">KINETIC ENGINE</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Kinetic Subtitle Magic</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Auto-generate high-conversion MrBeast and Hormozi-style bouncing captions with dynamic emojis, highlight colors, and sound effects.
+      </p>
+<div class="flex gap-1.5 mt-1 overflow-x-auto no-scrollbar py-0.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-label-pill font-label-pill">#NeonCyan</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary text-label-pill font-label-pill">#BouncyWord</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary text-label-pill font-label-pill">#AutoEmoji🔥</span>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-container p-space-md shadow-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary-container/25 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary px-2 py-0.5 rounded-full bg-primary-container/20">CREATOR REWARDS</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Monetization &amp; Resale Ready</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Passes TikTok, YouTube Shorts, and Meta automated re-upload filters cleanly through proprietary frame alteration and audio remastering.
+      </p>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-label-pill text-label-pill">
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+<span>100% Monetization Guarantee</span>
+</div>
+</div>
+</section>
+<section class="px-margin-mobile py-space-md flex flex-col gap-space-sm bg-surface-container-low rounded-2xl mx-margin-mobile mb-space-sm">
+<div class="text-center flex flex-col items-center">
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Transparent Investment</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">Pay As You Grow</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">Start completely free with zero commitment or credit card required.</p>
+</div>
+<div class="flex p-1 bg-surface-container-lowest rounded-xl gap-1">
+<button class="flex-1 py-2 text-center rounded-lg font-label-pill text-label-pill bg-primary-container text-on-primary shadow-sm transition-all" id="tab-free" onclick="switchPlanTab('free')">Starter (Free)</button>
+<button class="flex-1 py-2 text-center rounded-lg font-label-pill text-label-pill text-on-surface-variant hover:text-on-surface transition-all" id="tab-pro" onclick="switchPlanTab('pro')">Pro Creator</button>
+<button class="flex-1 py-2 text-center rounded-lg font-label-pill text-label-pill text-on-surface-variant hover:text-on-surface transition-all" id="tab-bundle" onclick="switchPlanTab('bundle')">Bundles</button>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-3 shadow-md" id="plan-display">
+<div class="flex justify-between items-baseline">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface" id="plan-name">Free Starter Plan</h4>
+<span class="font-label-mono text-label-mono text-secondary" id="plan-credits">5 AI Processing Credits Included</span>
+</div>
+<div class="text-right">
+<span class="font-headline-xl text-headline-xl text-on-background" id="plan-price">$0</span>
+<span class="font-body-sm text-body-sm text-outline" id="plan-period">/forever</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm text-on-surface-variant" id="plan-features">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span>5 clips extracted in 1080p full HD</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span>Dynamic kinetic Hormozi captions</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span>No credit card needed at signup</span>
+</div>
+</div>
+<button class="w-full mt-2 py-3 rounded-xl bg-primary text-on-primary font-headline-md text-headline-md flex items-center justify-center gap-1 shadow-md active:scale-95 transition-transform">
+<span id="plan-btn-text">Claim 5 Free Credits</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<section class="px-margin-mobile py-space-md flex flex-col gap-space-sm">
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Creator Feedback</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">Loved by Top Streamers</h2>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-readout-num text-readout-num">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+48.2M Views</span>
+</div>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2 pt-1">
+<div class="min-w-[260px] max-w-[260px] p-4 rounded-2xl bg-surface-container flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close-up avatar of handsome young male podcast host with headphones smiling warmly against soft studio neon lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnIoLOBcRD8lRIONYy3GKPRZVsCgQT0BdBifSbpXNQ-RR9nvwNl8hxuTfpOl1RUb41uSqyLLvVAvoHMkLFF4Q-h6-4K5vkbDQzLQaVHasKyLAuiixcyZN5AmvzlKL7KdF0ks-fxtlzJZHI4FgTl6fH70gFPmfa54qXwIGNWBQoKIcNk7pcT-Pc1AHWH6GSadtTILW1kQIy4njL1h9XPTB9LpmEstV0Xd1yZrgwLeTuN8Z2RBOVEOzx"/>
+<div>
+<p class="font-headline-md text-[14px] text-on-surface">Alex Rivera</p>
+<p class="font-label-mono text-label-mono text-secondary">@riverapdcst • 240k subs</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+            "ClipFlow pulled 12 viral shorts from my 3-hour stream in under 2 minutes. One clip gained 1.8M TikTok views overnight!"
+          </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-2 border-t-0 bg-surface-container-high px-2 py-1 rounded-lg">
+<span class="font-label-pill text-label-pill text-on-surface-variant">Views Generated</span>
+<span class="font-readout-num text-readout-num text-secondary font-bold">4.2M</span>
+</div>
+</div>
+<div class="min-w-[260px] max-w-[260px] p-4 rounded-2xl bg-surface-container flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of energetic young female fitness coach and content creator with high ponytail in bright colorful gym environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkBwt4cJnsPFPaPXkX008XtcASdGnA8Um0TnVhxDRCXZ8v-Fycp_lRlB9nPyf19MwAcrjEKQUss1eNstBmKi7yPPQ7tcV-rxtlOe4Fi_xxCxBF2h8y6Qwu0log6t8Ovu8XpXXBYGRmJQ04964cTXtc4M27cz5OUncQpw6zp2qLRAfnceXXtHkWR9z4XO_BsmxiujNDv_pe60tAulExjbbb9BCfHxS1O9AUbXt3fQ14z1m17iJc0vm"/>
+<div>
+<p class="font-headline-md text-[14px] text-on-surface">Chloe Vance</p>
+<p class="font-label-mono text-label-mono text-secondary">@vancefitness • 510k</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+            "The Hormozi subtitles and facial camera tracking save me 15 hours every week. I haven't opened Premiere in months."
+          </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-2 border-t-0 bg-surface-container-high px-2 py-1 rounded-lg">
+<span class="font-label-pill text-label-pill text-on-surface-variant">Views Generated</span>
+<span class="font-readout-num text-readout-num text-secondary font-bold">12.4M</span>
+</div>
+</div>
+<div class="min-w-[260px] max-w-[260px] p-4 rounded-2xl bg-surface-container flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of seasoned software educator with stylish glasses speaking in front of multi-monitor setup with code and sleek amber room lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlN_OqvCPLIWERTq_7nftQ_OcDPvbNsj-bey_CwTgMB7Rhc3vQzDNgsPoSlY5FsapdgilToFEqz24siA4Glc3VXUjonpZwtLLn80BoJDrV6-SHoKVOtSiMYs2F5RIRceWY7C48cVjAz5-QUURsiAS3DI7IoSxOQFEMDGK9dBg0HN4xjGYF9oH80WulOq-S5tHTf39ggHMlpnD38gXyuOUyTncAU7Kv7Sahxdr8988cGl_HSgFwZUw4"/>
+<div>
+<p class="font-headline-md text-[14px] text-on-surface">Devon Chen</p>
+<p class="font-label-mono text-label-mono text-secondary">@techwithdev • 92k</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+            "The Retinal Hook detection is uncanny. It automatically isolates punchy punchlines from dense technical talks."
+          </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-2 border-t-0 bg-surface-container-high px-2 py-1 rounded-lg">
+<span class="font-label-pill text-label-pill text-on-surface-variant">Views Generated</span>
+<span class="font-readout-num text-readout-num text-secondary font-bold">3.1M</span>
+</div>
+</div>
+</div>
+</section>
+<div class="h-24"></div>
+<aside class="fixed bottom-0 left-0 right-0 z-40 p-margin-mobile bg-surface/90 backdrop-blur-xl shadow-2xl">
+<div class="max-w-md mx-auto flex items-center justify-between gap-3">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[13px] text-on-surface truncate">Ready to blow up online?</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+<span class="font-label-pill text-label-pill text-secondary">5 Free Credits • No CC</span>
+</div>
+</div>
+<a class="px-5 py-3 rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-md text-[14px] flex items-center gap-1.5 shadow-lg active:scale-95 transition-transform flex-shrink-0" data-path="sign-in" href="#">
+<span>Claim Free</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</aside>
+</div>
+<script>
+  function setSample(url) {
+    const input = document.getElementById('video-url-input');
+    if (input) {
+      input.value = url;
+      input.classList.add('bg-surface-container-high');
+      setTimeout(() => input.classList.remove('bg-surface-container-high'), 400);
+    }
+  }
+
+  function switchPlanTab(plan) {
+    const tabFree = document.getElementById('tab-free');
+    const tabPro = document.getElementById('tab-pro');
+    const tabBundle = document.getElementById('tab-bundle');
+    const name = document.getElementById('plan-name');
+    const credits = document.getElementById('plan-credits');
+    const price = document.getElementById('plan-price');
+    const period = document.getElementById('plan-period');
+    const btnText = document.getElementById('plan-btn-text');
+    const features = document.getElementById('plan-features');
+
+    const unselected = 'flex-1 py-2 text-center rounded-lg font-label-pill text-label-pill text-on-surface-variant hover:text-on-surface transition-all';
+    const selected = 'flex-1 py-2 text-center rounded-lg font-label-pill text-label-pill bg-primary-container text-on-primary shadow-sm transition-all';
+
+    tabFree.className = unselected;
+    tabPro.className = unselected;
+    tabBundle.className = unselected;
+
+    if (plan === 'free') {
+      tabFree.className = selected;
+      name.textContent = 'Free Starter Plan';
+      credits.textContent = '5 AI Processing Credits Included';
+      price.textContent = '$0';
+      period.textContent = '/forever';
+      btnText.textContent = 'Claim 5 Free Credits';
+      features.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+          <span>5 clips extracted in 1080p full HD</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+          <span>Dynamic kinetic Hormozi captions</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+          <span>No credit card needed at signup</span>
+        </div>`;
+    } else if (plan === 'pro') {
+      tabPro.className = selected;
+      name.textContent = 'Pro Viral Creator';
+      credits.textContent = '100 Credits + Priority Queue';
+      price.textContent = '$19';
+      period.textContent = '/month';
+      btnText.textContent = 'Start 7-Day Pro Trial';
+      features.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+          <span>100 full short clips per month (4K render)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+          <span>Custom brand presets & font upload</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+          <span>Multi-speaker AI smart reframing</span>
+        </div>`;
+    } else if (plan === 'bundle') {
+      tabBundle.className = selected;
+      name.textContent = 'Agency Credit Pack';
+      credits.textContent = '500 Wholesale Credits (No Expiry)';
+      price.textContent = '$69';
+      period.textContent = '/one-time';
+      btnText.textContent = 'Purchase Credit Bundle';
+      features.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+          <span>Never expiring on-demand credit pool</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+          <span>Bulk export directly to Google Drive</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+          <span>Dedicated 24/7 priority render nodes</span>
+        </div>`;
+    }
+  }
+
+  document.getElementById('try-btn')?.addEventListener('click', function() {
+    const val = document.getElementById('video-url-input').value;
+    if (!val) return;
+    this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">autorenew</span><span>Analyzing Hook Points...</span>';
+    setTimeout(() => {
+      window.location.href = '#';
+    }, 900);
+  });
+</script></main><script>
+document.getElementById('logout-btn')?.addEventListener('click', () => {
+    fetch('/api/auth/logout', {method: 'POST'}).then(() => location.href = '/');
+});
+</script>
+</body></html>

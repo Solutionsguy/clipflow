@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link href="/static/css/tailwind.css" rel="stylesheet"><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 flex items-center gap-space-sm px-space-lg bg-surface-container-low"><img alt="Brand logo. - Primary color: #7c3aed
+- Font: plusJakartaSans
+- Mode: dark
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XqsLzYcqdg-NlX-G1aqrzSNnYozq7Wv0r-3NbMB9sq9cOnuJyDySSPjXntPDxcoeoY7-Tv6de6ZANIK1rqpCYK8KZs2otI0V37kjf9BUj5YwwPtlxpT3c9BAxd3zqprXn6wfuFDyAoufVmGLA3CotajyQ51ypCW24zE9tYjW47jbtJoXDAW4UGSSRl1ZZoNrT1jTfQUPLV6r0zpvC45Qjc_jJC3WtTLxj9_g1HZy1Jc3rDuHIF6BErUg"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface leading-none tracking-tight">ClipFlow</span><span class="font-label-mono text-label-mono text-secondary tracking-widest uppercase mt-0.5">Studio</span></div></div><div class="px-space-md py-space-sm"><div class="flex items-center justify-between px-space-sm py-space-xs mb-space-xs"><span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Workspace</span><span class="font-label-pill text-label-pill text-on-tertiary-container bg-tertiary-container px-1.5 py-0.5 rounded">v2.4</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_-4px_rgba(124,58,237,0.4)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="overview" href="#"><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="studio-editor" href="#"><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-[20px]">movie_edit</span><span class="font-body-md text-body-md">Studio Editor</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="projects-and-library" href="#"><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-[20px]">video_library</span><span class="font-body-md text-body-md">Projects &amp; Library</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="billing-and-compute-credits" href="#"><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-[20px]">toll</span><span class="font-body-md text-body-md">Billing &amp; Compute</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="api-and-integrations" href="#"><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-[20px]">hub</span><span class="font-body-md text-body-md">API &amp; Integrations</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="settings" href="#"><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm"><div class="h-px w-full bg-surface-container-highest"></div><nav class="flex flex-col" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 transition-all group bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="admin-console" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-[20px]">admin_panel_settings</span><span class="font-body-md text-body-md">Admin Console</span></div><span class="material-symbols-outlined text-outline group-hover:text-on-surface text-[16px]">north_east</span></a></nav><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">dns</span><span class="font-label-mono text-label-mono text-on-surface-variant">GPU NODE 04</span></div><span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-lg"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline pointer-events-none text-[20px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline pl-10 pr-4 py-2 rounded-lg font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-all" placeholder="Search clips, transcription keys, or rendering jobs..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 bg-surface-container-high px-space-sm py-1.5 rounded-full shadow-[inset_0_0_8px_rgba(255,255,255,0.02)]"><div class="flex items-center gap-1.5 pl-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">bolt</span><span class="font-readout-num text-readout-num text-on-surface">45</span><span class="font-label-mono text-label-mono text-outline uppercase">Credits</span></div><button class="bg-primary-container hover:bg-inverse-primary text-on-primary-container px-2.5 py-1 rounded-full font-label-pill text-label-pill transition-all flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[14px]">add</span>Add</button></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer group"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1X1NTif8mbCf3mPK4GavUwUDldwrvAfL3UX10VM8mnWKCONY5xPpdb3W7SYuAkh4o_pCit2-rND6TfTIvgnps-FWOOQi7xLYIj6B2MTrQ7m-kvzYANCn_RkBc5vDEqNW8Pv00GSnuq_PT1P2slSHeo65i1srtycLx0MJRinXE6Nr35wT2UATqR2BCwIcTTRxoIPm6xVidknM-5zLxbu6btks6xrKbEwp0jw6FEPJsYVAXcWvNdHXZuJMw"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-pill text-label-pill text-on-surface group-hover:text-primary transition-colors leading-tight">Creator Studio</span><span class="font-label-mono text-label-mono text-outline leading-tight">Pro Plan</span></div><button id="logout-btn" class="ml-2 px-2 py-1 text-sm text-on-surface-variant hover:text-on-surface">Logout</button><span class="material-symbols-outlined text-outline group-hover:text-on-surface text-[18px] transition-colors">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Dynamic Operational Sub-Header Bar -->
+<div class="relative w-full bg-surface-container-low/90 backdrop-blur-xl px-space-lg py-space-md shadow-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-secondary bg-surface-container-high px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+          SUPERADMIN CONSOLE
+        </span>
+<span class="font-label-mono text-label-mono text-outline">|</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">verified</span>
+          PROFIT ARBITRAGE ENGINE V3.1
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-3">
+        Compute Resale &amp; Infrastructure Ops
+      </h1>
+<p class="font-body-sm text-body-sm text-outline flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">bolt</span>
+<span class="text-tertiary font-readout-num">All GPU Nodes Operational</span>
+<span>(H100/A100 Clusters: 99.98% Healthy across 3 data centers)</span>
+</p>
+</div>
+<!-- Quick Ops Actions -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-2 rounded-lg font-label-pill text-label-pill transition-all flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+        Rebalance GPU Queues
+      </button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-2 rounded-lg font-label-pill text-label-pill transition-all flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">receipt_long</span>
+        Generate Wholesale Invoices
+      </button>
+<button class="bg-primary-container hover:bg-inverse-primary text-on-primary-container px-space-md py-2 rounded-lg font-label-pill text-label-pill transition-all flex items-center gap-1.5 shadow-md hover:shadow-[0_0_20px_-3px_rgba(124,58,237,0.5)]" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+        Export Financial Audit
+      </button>
+</div>
+</div>
+<!-- Content Workspace -->
+<div class="p-space-lg flex flex-col gap-space-xl">
+<!-- Top KPI Metric Cards (Wholesale vs Retail Resale Economics) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Gross Credit Revenue -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-lg relative overflow-hidden group hover:-translate-y-0.5 transition-transform duration-200">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Gross Credit Revenue (MTD)</span>
+<span class="font-display-mobile text-display-mobile text-on-surface mt-1 font-bold tracking-tight">$48,290</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">monetization_on</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-tertiary-container/30 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-tertiary text-[14px]">trending_up</span>
+<span class="font-readout-num text-readout-num text-tertiary">+28.4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">MoM</span>
+</div>
+<span class="font-label-mono text-label-mono text-outline">Retail Credit Sales</span>
+</div>
+</div>
+<!-- Wholesale Compute Cost (COGS) -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-lg relative overflow-hidden group hover:-translate-y-0.5 transition-transform duration-200">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Wholesale Compute Cost (COGS)</span>
+<span class="font-display-mobile text-display-mobile text-secondary mt-1 font-bold tracking-tight">$8,140</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">memory</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-surface-container-highest px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-secondary text-[14px]">speed</span>
+<span class="font-readout-num text-readout-num text-on-surface">1,420k</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">tokens/s</span>
+</div>
+<span class="font-label-mono text-label-mono text-outline">GPU &amp; Whisper Direct</span>
+</div>
+</div>
+<!-- Net Resale Profit Margin -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-lg relative overflow-hidden group hover:-translate-y-0.5 transition-transform duration-200">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-tertiary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Net Resale Profit</span>
+<span class="font-display-mobile text-display-mobile text-tertiary mt-1 font-bold tracking-tight">$40,150</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/40 flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-tertiary-container/60 px-2 py-0.5 rounded-full shadow-[inset_0_0_8px_rgba(16,185,129,0.25)]">
+<span class="font-readout-num text-readout-num text-on-tertiary-container font-bold">83.1%</span>
+<span class="font-label-pill text-label-pill text-on-tertiary-container uppercase">Gross Margin</span>
+</div>
+<span class="font-label-mono text-label-mono text-tertiary tracking-tight">11.6x Arbitrage Multiplier</span>
+</div>
+</div>
+<!-- Active Concurrency & Jobs -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-lg relative overflow-hidden group hover:-translate-y-0.5 transition-transform duration-200">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-surface-container-highest rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Active Concurrency &amp; Jobs</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-mobile text-display-mobile text-on-surface font-bold tracking-tight">142</span>
+<span class="font-label-pill text-label-pill text-secondary uppercase tracking-widest bg-surface-container-high px-2 py-0.5 rounded">Rendering</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[22px]">dynamic_feed</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-readout-num text-readout-num text-on-surface">1,890 Idle Nodes</span>
+</div>
+<span class="font-label-mono text-label-mono text-outline">Queue Delay: &lt; 0.4s</span>
+</div>
+</div>
+</div>
+<!-- Main Operational Grid: Arbitrage Model vs Node Telemetry -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Wholesale vs Resale Arbitrage Engine (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">finance_chip</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Wholesale Model vs Credit Resale Arbitrage</h2>
+</div>
+<span class="font-label-mono text-label-mono text-tertiary bg-surface-container-high px-2.5 py-1 rounded-full">Unit Economics Per 60s Clip</span>
+</div>
+<!-- Arbitrage Cost Comparison Visualizer -->
+<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Raw Cost Card -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md relative">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Raw Wholesale Compute</span>
+<span class="material-symbols-outlined text-outline text-[18px]">dns</span>
+</div>
+<div class="my-3 flex items-baseline gap-2">
+<span class="font-display-mobile text-display-mobile text-secondary font-bold">$0.030</span>
+<span class="font-body-sm text-body-sm text-outline">/ 60s video</span>
+</div>
+<div class="flex flex-col gap-1.5 text-xs font-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Whisper v3 ASR (2.1s):</span>
+<span class="font-readout-num text-readout-num text-on-surface">$0.006</span>
+</div>
+<div class="flex justify-between">
+<span>Vision Salience &amp; Framing:</span>
+<span class="font-readout-num text-readout-num text-on-surface">$0.014</span>
+</div>
+<div class="flex justify-between">
+<span>FFmpeg NVENC 1080p Encode:</span>
+<span class="font-readout-num text-readout-num text-on-surface">$0.010</span>
+</div>
+</div>
+</div>
+<!-- Retail Credit Card -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute right-0 top-0 w-32 h-32 bg-primary-container/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-tertiary uppercase tracking-wider">Creator Credit Charge</span>
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+</div>
+<div class="my-3 flex items-baseline gap-2">
+<span class="font-display-mobile text-display-mobile text-tertiary font-bold">$0.350</span>
+<span class="font-body-sm text-body-sm text-outline">/ 35 credits</span>
+</div>
+<div class="flex flex-col gap-1.5 text-xs font-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Arbitrage Net Spread:</span>
+<span class="font-readout-num text-readout-num text-tertiary font-semibold">+$0.320 / clip</span>
+</div>
+<div class="flex justify-between">
+<span>Effective Value Markup:</span>
+<span class="font-readout-num text-readout-num text-tertiary font-semibold">11.66x (1,166%)</span>
+</div>
+<div class="flex justify-between">
+<span>Gross Margin Retained:</span>
+<span class="font-readout-num text-readout-num text-tertiary font-semibold">91.4%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Bar Split Visualization -->
+<div class="mt-5 bg-surface-container-high p-space-md rounded-lg flex flex-col gap-2">
+<div class="flex justify-between items-center text-xs">
+<span class="font-label-mono text-label-mono text-outline">REVENUE COMPONENT SPLIT (PER CLIP REVENUE)</span>
+<span class="font-label-mono text-label-mono text-tertiary font-semibold">91.4% CLIPFLOW PROFIT</span>
+</div>
+<!-- Segmented Progress Bar -->
+<div class="h-3 w-full bg-surface-container-lowest rounded-full overflow-hidden flex shadow-inner">
+<div class="h-full bg-secondary transition-all" style="width: 8.6%;" title="Compute Cost: $0.03"></div>
+<div class="h-full bg-tertiary transition-all" style="width: 91.4%;" title="Gross Profit: $0.32"></div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-label-mono text-on-surface-variant pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Wholesale Hardware (8.6%)
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Platform Resale Margin (91.4%)
+              </span>
+</div>
+</div>
+<!-- Dynamic Pricing Matrix Interactive Simulation Slider -->
+<div class="mt-5 bg-surface-container p-space-md rounded-lg flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface text-[15px]">Dynamic Credit Arbitrage Multiplier</span>
+<span class="font-body-sm text-body-sm text-outline">Simulate revenue impact across 125,000 monthly rendering pipeline transactions</span>
+</div>
+<span class="font-readout-num text-readout-num text-primary font-bold bg-surface-container-high px-3 py-1 rounded-lg" id="multiplierValue">11.6x</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" id="multiplierRange" max="25" min="5" step="0.2" type="range" value="11.6"/>
+<div class="grid grid-cols-3 gap-space-sm pt-2 text-center">
+<div class="bg-surface-container-high p-2 rounded">
+<span class="font-label-mono text-label-mono text-outline block">Projected MTD Rev</span>
+<span class="font-readout-num text-readout-num text-on-surface font-semibold" id="projRev">$48,290</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded">
+<span class="font-label-mono text-label-mono text-outline block">Estimated Gross Margin</span>
+<span class="font-readout-num text-readout-num text-tertiary font-semibold" id="projMargin">91.4%</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded">
+<span class="font-label-mono text-label-mono text-outline block">Est. Monthly Profit</span>
+<span class="font-readout-num text-readout-num text-tertiary font-bold" id="projProfit">+$40,150</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: GPU Node Cluster Telemetry (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">dns</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">GPU Node Cluster Telemetry</h2>
+</div>
+<span class="font-label-mono text-label-mono text-secondary bg-surface-container-high px-2 py-0.5 rounded">16 GPUs Live</span>
+</div>
+<!-- Cluster List -->
+<div class="flex flex-col gap-space-sm mt-3">
+<!-- Node US East -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-md text-headline-md text-[14px] text-on-surface">Cluster-US-East-1</span>
+<span class="font-label-mono text-label-mono text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">8x H100 SXM5</span>
+</div>
+<span class="font-readout-num text-readout-num text-on-surface font-semibold">76% Load</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-primary" style="width: 76%;"></div>
+</div>
+<div class="flex items-center justify-between text-xs font-label-mono text-outline">
+<span>VRAM: 608GB / 640GB</span>
+<span>Thermals: 58°C avg</span>
+<span>Active Threads: 78</span>
+</div>
+</div>
+<!-- Node EU West -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-md text-headline-md text-[14px] text-on-surface">Cluster-EU-West-1</span>
+<span class="font-label-mono text-label-mono text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">4x A100 80GB</span>
+</div>
+<span class="font-readout-num text-readout-num text-on-surface font-semibold">42% Load</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 42%;"></div>
+</div>
+<div class="flex items-center justify-between text-xs font-label-mono text-outline">
+<span>VRAM: 134GB / 320GB</span>
+<span>Thermals: 51°C avg</span>
+<span>Active Threads: 34</span>
+</div>
+</div>
+<!-- Node APAC -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-md text-headline-md text-[14px] text-on-surface">Cluster-APAC-1</span>
+<span class="font-label-mono text-label-mono text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">4x L40S 48GB</span>
+</div>
+<span class="font-readout-num text-readout-num text-on-surface font-semibold">55% Load</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 55%;"></div>
+</div>
+<div class="flex items-center justify-between text-xs font-label-mono text-outline">
+<span>VRAM: 105GB / 192GB</span>
+<span>Thermals: 54°C avg</span>
+<span>Active Threads: 30</span>
+</div>
+</div>
+</div>
+<!-- Benchmark Metrics Box -->
+<div class="mt-4 bg-surface-container-high rounded-lg p-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">Average Clip Processing Latency</span>
+<span class="font-headline-md text-headline-md text-on-surface">38.2s <span class="text-sm font-normal text-on-surface-variant">/ 1080p 60fps render</span></span>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-label-pill text-label-pill text-on-tertiary-container bg-tertiary-container px-2 py-0.5 rounded">Benchmark Pass</span>
+<span class="font-readout-num text-readout-num text-outline text-xs mt-1">99.4% &lt; 45s SLA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Data Table: Live User Transactions & Compute Consumption Audit -->
+<div class="bg-surface-container-low rounded-xl shadow-lg flex flex-col overflow-hidden">
+<!-- Table Header & Controls -->
+<div class="p-space-lg flex flex-wrap items-center justify-between gap-space-md bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">table_chart_view</span>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Live User Transactions &amp; Compute Consumption Audit</h3>
+<span class="font-body-sm text-body-sm text-outline">Real-time ledger matching customer credit burns with actual GPU inference COGS</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="bg-surface-container-highest px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Ingesting Stream</span>
+</div>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container font-label-mono text-label-mono text-outline uppercase tracking-wider">
+<th class="py-3 px-space-md">Creator / Agency</th>
+<th class="py-3 px-space-md">Plan / Bundle</th>
+<th class="py-3 px-space-md text-right">Credits Spent</th>
+<th class="py-3 px-space-md text-right">Raw Compute Cost</th>
+<th class="py-3 px-space-md text-right">Realized Margin</th>
+<th class="py-3 px-space-md">Job / Clip Ref</th>
+<th class="py-3 px-space-md">Timestamp</th>
+<th class="py-3 px-space-md text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/40 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary-container/30 flex items-center justify-center font-bold text-xs text-primary">
+                    VM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Vortex Media Agency</span>
+<span class="text-[11px] font-label-mono text-outline">uid: ag_8832a</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high text-secondary font-label-pill text-label-pill px-2 py-0.5 rounded">Agency Enterprise (50k)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-on-surface">
+<span class="text-primary font-bold">120 cr</span> <span class="text-xs text-outline">($1.20)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-secondary">
+                $0.134
+              </td>
+<td class="py-3.5 px-space-md text-right font-readout-num">
+<span class="text-tertiary bg-tertiary-container/30 px-2 py-0.5 rounded-full font-bold shadow-sm">+89.0%</span>
+</td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-outline">
+                clip_4k_9812739
+              </td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-on-surface-variant">
+                12s ago
+              </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-tertiary text-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Settled
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-secondary-container/30 flex items-center justify-center font-bold text-xs text-secondary">
+                    KC
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Kai Chen Studios</span>
+<span class="text-[11px] font-label-mono text-outline">uid: cr_91820</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high text-primary font-label-pill text-label-pill px-2 py-0.5 rounded">Creator Pro (5k)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-on-surface">
+<span class="text-primary font-bold">35 cr</span> <span class="text-xs text-outline">($0.35)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-secondary">
+                $0.048
+              </td>
+<td class="py-3.5 px-space-md text-right font-readout-num">
+<span class="text-tertiary bg-tertiary-container/30 px-2 py-0.5 rounded-full font-bold shadow-sm">+86.3%</span>
+</td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-outline">
+                clip_1080_09128
+              </td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-on-surface-variant">
+                44s ago
+              </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-tertiary text-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Settled
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-tertiary-container/30 flex items-center justify-center font-bold text-xs text-tertiary">
+                    NL
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">NextLevel Podcasting</span>
+<span class="text-[11px] font-label-mono text-outline">uid: ag_3411b</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high text-secondary font-label-pill text-label-pill px-2 py-0.5 rounded">Agency Enterprise (50k)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-on-surface">
+<span class="text-primary font-bold">280 cr</span> <span class="text-xs text-outline">($2.80)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-secondary">
+                $0.392
+              </td>
+<td class="py-3.5 px-space-md text-right font-readout-num">
+<span class="text-tertiary bg-tertiary-container/30 px-2 py-0.5 rounded-full font-bold shadow-sm">+86.0%</span>
+</td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-outline">
+                clip_batch_88192
+              </td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-on-surface-variant">
+                1m 15s ago
+              </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-tertiary text-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Settled
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-xs text-on-surface">
+                    SH
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Sarah H. Viral Shorts</span>
+<span class="text-[11px] font-label-mono text-outline">uid: cr_11923</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high text-on-surface font-label-pill text-label-pill px-2 py-0.5 rounded">Starter Tier (1k)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-on-surface">
+<span class="text-primary font-bold">40 cr</span> <span class="text-xs text-outline">($0.40)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-secondary">
+                $0.076
+              </td>
+<td class="py-3.5 px-space-md text-right font-readout-num">
+<span class="text-tertiary bg-tertiary-container/30 px-2 py-0.5 rounded-full font-bold shadow-sm">+81.0%</span>
+</td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-outline">
+                clip_1080_55219
+              </td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-on-surface-variant">
+                2m 04s ago
+              </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-tertiary text-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Settled
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary-container/30 flex items-center justify-center font-bold text-xs text-primary">
+                    HG
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">HyperGrowth Marketing</span>
+<span class="text-[11px] font-label-mono text-outline">uid: ag_99201</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high text-secondary font-label-pill text-label-pill px-2 py-0.5 rounded">Agency Enterprise (50k)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-on-surface">
+<span class="text-primary font-bold">450 cr</span> <span class="text-xs text-outline">($4.50)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-readout-num text-secondary">
+                $0.495
+              </td>
+<td class="py-3.5 px-space-md text-right font-readout-num">
+<span class="text-tertiary bg-tertiary-container/30 px-2 py-0.5 rounded-full font-bold shadow-sm">+89.0%</span>
+</td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-outline">
+                clip_batch_44018
+              </td>
+<td class="py-3.5 px-space-md font-label-mono text-xs text-on-surface-variant">
+                3m 22s ago
+              </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 text-tertiary text-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Settled
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Ledger Summary -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-wrap items-center justify-between text-xs text-outline font-label-mono">
+<div class="flex items-center gap-4">
+<span>Displaying 5 of 14,892 transactions today</span>
+<span class="text-tertiary">Real-time Margin Integrity: 88.4% Average</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface" type="button">Prev</button>
+<span class="px-2 text-on-surface">Page 1 of 298</span>
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface" type="button">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Dynamic Pricing Matrix Simulation Logic -->
+<script>
+  (function() {
+    const slider = document.getElementById('multiplierRange');
+    const multiplierVal = document.getElementById('multiplierValue');
+    const projRev = document.getElementById('projRev');
+    const projMargin = document.getElementById('projMargin');
+    const projProfit = document.getElementById('projProfit');
+
+    if (!slider) return;
+
+    const baseCostPerClip = 0.030; // raw compute cogs
+    const monthlyClips = 138000;
+    const baseCogsTotal = baseCostPerClip * monthlyClips; // $4,140 baseline compute
+
+    slider.addEventListener('input', function(e) {
+      const mult = parseFloat(e.target.value);
+      multiplierVal.textContent = mult.toFixed(1) + 'x';
+      
+      // Calculate retail price per clip
+      const pricePerClip = baseCostPerClip * mult;
+      const totalRevenue = pricePerClip * monthlyClips;
+      const totalProfit = totalRevenue - baseCogsTotal;
+      const marginPct = ((totalProfit / totalRevenue) * 100);
+
+      projRev.textContent = '$' + Math.round(totalRevenue).toLocaleString();
+      projMargin.textContent = marginPct.toFixed(1) + '%';
+      projProfit.textContent = '+$' + Math.round(totalProfit).toLocaleString();
+    });
+  })();
+</script></main></div><script>
+document.getElementById('logout-btn')?.addEventListener('click', () => {
+    fetch('/api/auth/logout', {method: 'POST'}).then(() => location.href = '/');
+});
+</script>
+</body></html>

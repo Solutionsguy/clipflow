@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link href="/static/css/tailwind.css" rel="stylesheet"><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>ClipFlow</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-shrink-0"><img alt="ClipFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XqsLzYcqdg-NlX-G1aqrzSNnYozq7Wv0r-3NbMB9sq9cOnuJyDySSPjXntPDxcoeoY7-Tv6de6ZANIK1rqpCYK8KZs2otI0V37kjf9BUj5YwwPtlxpT3c9BAxd3zqprXn6wfuFDyAoufVmGLA3CotajyQ51ypCW24zE9tYjW47jbtJoXDAW4UGSSRl1ZZoNrT1jTfQUPLV6r0zpvC45Qjc_jJC3WtTLxj9_g1HZy1Jc3rDuHIF6BErUg"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight bg-gradient-to-r from-primary via-primary-fixed to-secondary bg-clip-text text-transparent">ClipFlow</span><span class="font-label-mono text-label-mono text-on-surface-variant/70 tracking-wider uppercase -mt-1 truncate max-w-[90px]">Studio Workspace</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><a class="h-9 pl-space-sm pr-space-xs rounded-full bg-surface-container/90 backdrop-blur-md flex items-center gap-space-xs shadow-[0_0_12px_rgba(76,215,246,0.25)] hover:shadow-[0_0_16px_rgba(210,187,255,0.4)] transition-all" data-path="credits" href="#"><span class="material-symbols-outlined text-secondary text-[18px] animate-pulse">bolt</span><span class="font-readout-num text-readout-num text-on-surface font-semibold">45</span><span class="font-label-mono text-[10px] text-on-surface-variant font-medium uppercase tracking-tighter">CR</span><div class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center ml-0.5"><span class="material-symbols-outlined text-[14px] leading-none">add</span></div></a><div class="p-0.5 rounded-full bg-gradient-to-tr from-primary to-secondary shadow-[0_0_10px_rgba(124,58,237,0.35)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5x33fVC1NLZvubHjXCXMkrgY7NLt0YF7ejojty9ngVT7FdEG8PUPc_ri-YulsdRGhyGeX8tTJSwMOJmRjQzW9gC9VSWWkANaj2ZRyXxskz_LsoM763zEq0IWZP_5kEF8Jp7Carcjzw2-_lkB3mIZG0XvVbK0fci2fT1tLKFVzIam95q1E7AjEOCr3tIO-aLG1Vy9ex5NihxKvuXJ_5IaZkP5j0wE03iy6w86ArMyoKAiC8EkYCv2Q"/></div><button id="logout-btn" class="ml-2 px-2 py-1 text-sm text-on-surface-variant hover:text-on-surface">Logout</button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-20">
+<!-- Dynamic Audio Particle Background Ambient -->
+<div class="fixed inset-0 pointer-events-none -z-10 opacity-35">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[340px] h-[340px] bg-primary-container/20 rounded-full blur-[90px]"></div>
+<div class="absolute top-[420px] -left-20 w-[240px] h-[240px] bg-secondary-container/15 rounded-full blur-[80px]"></div>
+</div>
+<!-- Workspace Sub-Header / Breadcrumb Navigation -->
+<section class="px-margin-mobile pt-space-xs pb-space-sm flex items-center justify-between gap-space-sm">
+<a class="flex items-center gap-space-xs p-1.5 -ml-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all active:scale-95" data-path="projects-dashboard" href="#">
+<span class="material-symbols-outlined text-[20px] text-secondary">arrow_back</span>
+<span class="font-label-pill text-label-pill uppercase tracking-wider">Projects</span>
+</a>
+<div class="flex items-center gap-space-xs">
+<div class="px-2.5 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-mono text-[11px] text-on-surface font-semibold">12 CLIPS EXTRACTED</span>
+</div>
+</div>
+</section>
+<!-- Project Identity Title Row -->
+<section class="px-margin-mobile mb-space-sm">
+<div class="flex items-baseline justify-between gap-space-sm">
+<div class="min-w-0">
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight truncate">
+          All-In Podcast Ep 174
+        </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span>Source: 4K Master (01:24:18)</span>
+<span class="text-secondary/70">•</span>
+<span class="text-secondary font-medium">Whisper-v3 Transcribed</span>
+</p>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-secondary active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</section>
+<!-- 9:16 Vertical Video Studio Stage -->
+<section class="px-margin-mobile mb-space-md">
+<div class="relative w-full max-w-[340px] mx-auto aspect-[9/16] rounded-xl overflow-hidden bg-surface-container-lowest shadow-2xl flex flex-col justify-between p-3 select-none">
+<!-- Video Background (Speaker Frame) -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center scale-105 transition-transform duration-700" data-alt="A focused close-up studio frame of a tech podcast host in front of a Shure SM7B microphone with cinematic low-key purple and teal rim lighting, dark moody studio background with diffuse acoustic foam panels, 4k ultra-detailed cinematic documentary still" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADk0kgUHqyuFUKqgsVss5BSF7j8EdyPgJjvIjafwfBY4DAvdcFkA6pIvned_hFwVItMLil1WPh1xqkSPmIKEkx519eG1tx5M-jV466O7nj9c2RMhafZGyawDuFNGnX4Km8olCn9itQFPx6DrlBfjpke94Aij7ViZwq2hajYAWOPe_i-sDE-WYTyludf756XEZrw2-5vqTV-wkoEkuqjl6-EghIZ8d5WDNBZeSlgL8-WotqfSiZuQ0z"/>
+<!-- Ambient Vignette & Dynamic Grid -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/80"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
+</div>
+<!-- Top Overlay Badges: AI Reframing & Aspect Ratio Indicator -->
+<div class="relative z-10 flex items-center justify-between w-full">
+<!-- Auto Reframing Chip -->
+<div class="px-2.5 py-1 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-secondary text-[14px]">center_focus_strong</span>
+<span class="font-label-mono text-[10px] tracking-tight text-on-surface font-semibold">Active Speaker 🎯</span>
+</div>
+<!-- Resolution & 9:16 Lock -->
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/80 backdrop-blur-md font-label-mono text-[9px] text-secondary font-bold uppercase tracking-wider">9:16 Reels</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest/60 backdrop-blur-md font-label-mono text-[9px] text-on-surface-variant">60FPS</span>
+</div>
+</div>
+<!-- AI Face-Tracking Laser Target Visual Overlay (Subtle Delight) -->
+<div class="relative z-10 pointer-events-none flex items-center justify-center my-auto">
+<div class="w-36 h-44 rounded-2xl bg-secondary/5 flex flex-col justify-between p-1.5 opacity-70 transition-opacity">
+<div class="flex justify-between w-full">
+<span class="w-2.5 h-2.5 bg-secondary/80 rounded-tl-sm"></span>
+<span class="w-2.5 h-2.5 bg-secondary/80 rounded-tr-sm"></span>
+</div>
+<div class="self-center px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm font-label-mono text-[8px] text-secondary tracking-widest uppercase">AI Focus Lock 99.4%</div>
+<div class="flex justify-between w-full">
+<span class="w-2.5 h-2.5 bg-secondary/80 rounded-bl-sm"></span>
+<span class="w-2.5 h-2.5 bg-secondary/80 rounded-br-sm"></span>
+</div>
+</div>
+</div>
+<!-- Dynamic Kinetic Subtitle & Scrubber HUD (Bottom-anchored) -->
+<div class="relative z-10 flex flex-col gap-2 w-full">
+<!-- Active Karaoke Subtitle Frame -->
+<div class="px-2.5 py-2 rounded-xl bg-surface-container-lowest/85 backdrop-blur-lg shadow-xl text-center">
+<p class="font-headline-md text-[16px] leading-snug font-extrabold tracking-wide uppercase drop-shadow-md text-on-surface">
+<span class="text-on-surface/50">The real</span>
+<span class="text-secondary drop-shadow-[0_0_10px_rgba(76,215,246,0.6)]">BREAKTHROUGH</span>
+<span class="text-on-surface">is when</span>
+<span class="text-tertiary drop-shadow-[0_0_12px_rgba(78,222,163,0.7)]">AI WRITES</span>
+<span class="text-on-surface/50">the code itself...</span>
+</p>
+</div>
+<!-- Audio Waveform Live Visualizer (Inline SVG Micro-Chart) -->
+<div class="w-full px-1 flex items-center justify-between gap-0.5 h-4 opacity-85 overflow-hidden">
+<div class="w-1 bg-secondary/40 h-2 rounded-full"></div>
+<div class="w-1 bg-secondary/50 h-3 rounded-full"></div>
+<div class="w-1 bg-secondary/80 h-4 rounded-full"></div>
+<div class="w-1 bg-primary h-2.5 rounded-full"></div>
+<div class="w-1 bg-secondary h-4 rounded-full animate-pulse"></div>
+<div class="w-1 bg-tertiary h-3 rounded-full"></div>
+<div class="w-1 bg-secondary h-4 rounded-full"></div>
+<div class="w-1 bg-primary h-2 rounded-full"></div>
+<div class="w-1 bg-secondary/70 h-3 rounded-full"></div>
+<div class="w-1 bg-primary/90 h-4 rounded-full"></div>
+<div class="w-1 bg-secondary h-3.5 rounded-full"></div>
+<div class="w-1 bg-secondary/50 h-1.5 rounded-full"></div>
+<div class="w-1 bg-secondary/80 h-3.5 rounded-full"></div>
+<div class="w-1 bg-tertiary h-4 rounded-full animate-pulse"></div>
+<div class="w-1 bg-secondary h-2.5 rounded-full"></div>
+<div class="w-1 bg-secondary/60 h-3 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-secondary/80 h-2 rounded-full"></div>
+<div class="w-1 bg-secondary/40 h-1 rounded-full"></div>
+</div>
+<!-- Video Player Micro Controls Bar -->
+<div class="p-2 rounded-xl bg-surface-container-high/90 backdrop-blur-xl flex flex-col gap-1.5">
+<!-- Interactive Scrubber Bar -->
+<div class="relative w-full h-2 rounded-full bg-surface-container-highest cursor-pointer flex items-center group">
+<div class="absolute left-0 top-0 bottom-0 w-[34%] bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+<div class="absolute left-[34%] -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-on-surface shadow-[0_0_8px_rgba(76,215,246,0.8)] scale-110"></div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5">
+<button class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md" id="playBtn" type="button">
+<span class="material-symbols-outlined text-[18px] leading-none ml-0.5">play_arrow</span>
+</button>
+<div class="font-readout-num text-readout-num text-on-surface tracking-tight">
+<span class="text-secondary font-bold">00:18</span>
+<span class="text-on-surface-variant/60"> / 00:54</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:text-on-surface text-[18px] p-0.5" type="button">
+<span class="material-symbols-outlined text-[18px]">replay_10</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface text-[18px] p-0.5" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Subtitle Style Quick Switcher (Horizontal Carousel) -->
+<section class="px-margin-mobile mb-space-lg">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-mono text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">closed_caption</span>
+        Subtitle Visual Preset
+      </span>
+<span class="font-label-mono text-[10px] text-secondary font-medium">B-Roll Auto-Synced</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<!-- Style 1 (Active: Hormozi Neon) -->
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container shadow-[0_0_14px_rgba(124,58,237,0.4)] flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-pill text-label-pill font-bold">Hormozi Neon</span>
+</button>
+<!-- Style 2 -->
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-[#fde047]"></span>
+<span class="font-label-pill text-label-pill font-medium">Beast Yellow</span>
+</button>
+<!-- Style 3 -->
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-on-surface"></span>
+<span class="font-label-pill text-label-pill font-medium">Minimal White</span>
+</button>
+<!-- Style 4 -->
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-pill text-label-pill font-medium">Cyber Cyan</span>
+</button>
+</div>
+</section>
+<!-- AI-Extracted Clips Selection Section -->
+<section class="px-margin-mobile flex flex-col gap-space-sm mb-space-lg">
+<!-- Section Header & Filter Chips -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Extracted Clips</h2>
+<span class="font-label-mono text-[10px] text-tertiary font-bold tracking-wider uppercase bg-tertiary-container/30 px-2 py-0.5 rounded-full">AI Ranked</span>
+</div>
+<!-- Filter Segmented Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-0.5">
+<button class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface font-label-pill text-label-pill font-semibold shadow-xs" type="button">
+          All (12)
+        </button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-pill text-label-pill font-medium transition-colors" type="button">
+          Top Hooks (&gt;90%)
+        </button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-pill text-label-pill font-medium transition-colors" type="button">
+          Under 30s
+        </button>
+</div>
+</div>
+<!-- Ranked Clips List Stack -->
+<div class="flex flex-col gap-space-sm mt-1">
+<!-- Clip Card 1 (Selected & High Viral Hook) -->
+<div class="group relative rounded-xl bg-surface-container-high p-space-sm shadow-lg transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<!-- Thumbnail Micro Frame with duration badge -->
+<div class="relative w-20 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up frame of a male speaker with glasses passionately gesturing in front of a sleek dark conference backdrop with neon violet backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMhFCcTz8T5CylxFED1Ugd-bkMFb3cyKLEG7ucx6gA7MuUSiGpKnuKyLH5ZxONqhDrSBa3h8Ocol18Z2nqmIFzNLcut5JCGLlbhuWHEXgx40lggjkHaEVIcEqVbaSdtGzHU1zqeq15pCmATAtxpuSeG6ZKerVKna57tGTv8LhYjuDfndzzL5GEH4ZoaZrmolxe-3f05E-CfVCpi40kU5bTvlQla3KKq6s4XXUScjx2njgqgxElJ0hU"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-surface-container-lowest/90 font-label-mono text-[9px] text-on-surface font-semibold">0:42</span>
+<!-- Live Preview Indicator Icon -->
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary text-[22px]">play_circle</span>
+</div>
+</div>
+<!-- Clip Content & Stats -->
+<div class="flex-1 min-w-0 flex flex-col justify-between h-28">
+<div class="flex items-center justify-between gap-1">
+<!-- High Score Pill (Viral Emerald) -->
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-mono text-[10px] font-bold tracking-tight shadow-sm flex items-center gap-1">
+<span>🔥</span>
+<span>98% VIRAL HOOK</span>
+</span>
+<!-- Custom Checkbox (Selected) -->
+<div class="w-5 h-5 rounded bg-primary text-on-primary flex items-center justify-center shadow-[0_0_8px_rgba(210,187,255,0.4)]">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+</div>
+<!-- Hook Transcript Excerpt -->
+<p class="font-body-sm text-body-sm text-on-surface font-semibold line-clamp-2 mt-1">
+              “This one chip changes the entire trillion-dollar datacenter industry...”
+            </p>
+<!-- Metadata & Timecode Bar -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono text-[11px] pt-1">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                14:20 - 15:02
+              </span>
+<span class="text-on-surface-variant/70">Reframed 9:16</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Clip Card 2 (Unselected) -->
+<div class="relative rounded-xl bg-surface-container p-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<!-- Thumbnail Micro Frame -->
+<div class="relative w-20 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Side profile shot of a podcast guest speaking excitedly into a boom mic with soft ambient cyber cyan gradient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDdaDweztEXHRApNw_hM0ISHRQwIfxnPkTtpL4AKrIoB4qmw65luFO2aGLALcsr6dg4legF7uL3PW1yG2ttXm8sYhNP8Gxk2LBoijK7GA-ksZXhS8jS2AE6becY876aGDtzScoP5w-u64KQKslpjyVTAk9LTK0aY9oNDukHvzyeue6XQe5dzBpEQRa2tmZSTcO0dxvQXQdT_P9JOY-BttIR3WhX4k7h4LNFu8UEP1gHCLraXaCXcOP"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-surface-container-lowest/90 font-label-mono text-[9px] text-on-surface font-semibold">0:35</span>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-60">
+<span class="material-symbols-outlined text-on-surface text-[22px]">play_circle</span>
+</div>
+</div>
+<!-- Clip Content & Stats -->
+<div class="flex-1 min-w-0 flex flex-col justify-between h-28">
+<div class="flex items-center justify-between gap-1">
+<!-- High Score Pill -->
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-mono text-[10px] font-bold tracking-tight flex items-center gap-1">
+<span>⚡</span>
+<span>94% VIRAL HOOK</span>
+</span>
+<!-- Custom Checkbox (Unselected) -->
+<div class="w-5 h-5 rounded bg-surface-container-highest hover:bg-surface-bright flex items-center justify-center"></div>
+</div>
+<!-- Hook Transcript Excerpt -->
+<p class="font-body-sm text-body-sm text-on-surface font-medium line-clamp-2 mt-1">
+              “Nobody understands how fast robotics is catching up to LLMs.”
+            </p>
+<!-- Metadata & Timecode Bar -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono text-[11px] pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                28:10 - 28:45
+              </span>
+<span class="text-on-surface-variant/70">Reframed 9:16</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Clip Card 3 (Unselected) -->
+<div class="relative rounded-xl bg-surface-container p-space-sm shadow-md hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<!-- Thumbnail Micro Frame -->
+<div class="relative w-20 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Wide high angle podcast lounge setup with two hosts discussing venture capital trends illuminated by soft purple studio fill light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHYoacjcSDtAYZSR900l3mzLtCBigXBZpHvp1S3GdR9Uhc3X3O1900ztvt7PucRNvXPW_IB26wSsPHISOQ_F1y8eqP6BXP1fWbvDfUp70ttBoa9YLP-2ZN3Pm8Y83rWt-4lQNYGb_9gCtdsshcJLAi-PO_XIKBv3jhGmSGlMLySXfE7ueaIFFH9I7rZXK-045_NGFS3Y9jSdgM1b0gf2Wr2awJRm_Hjoe8JD-S2LMx1IZ_z_7-vDN"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-surface-container-lowest/90 font-label-mono text-[9px] text-on-surface font-semibold">0:58</span>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-60">
+<span class="material-symbols-outlined text-on-surface text-[22px]">play_circle</span>
+</div>
+</div>
+<!-- Clip Content & Stats -->
+<div class="flex-1 min-w-0 flex flex-col justify-between h-28">
+<div class="flex items-center justify-between gap-1">
+<!-- Medium Score Pill -->
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-mono text-[10px] font-bold tracking-tight flex items-center gap-1">
+<span>⚡</span>
+<span>89% VIRAL HOOK</span>
+</span>
+<!-- Custom Checkbox (Unselected) -->
+<div class="w-5 h-5 rounded bg-surface-container-highest hover:bg-surface-bright flex items-center justify-center"></div>
+</div>
+<!-- Hook Transcript Excerpt -->
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium line-clamp-2 mt-1">
+              “The advice I give every founder starting right now in 2025.”
+            </p>
+<!-- Metadata & Timecode Bar -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-mono text-[11px] pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                41:05 - 42:03
+              </span>
+<span class="text-on-surface-variant/70">Reframed 9:16</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Workbench Command Bar -->
+<div class="fixed bottom-16 left-0 right-0 z-40 px-margin-mobile py-2.5 bg-surface-container-lowest/90 backdrop-blur-2xl shadow-[0_-8px_32px_rgba(0,0,0,0.6)]">
+<div class="max-w-md mx-auto flex items-center justify-between gap-space-sm">
+<!-- Selection Counter Pill -->
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline-md text-[14px] text-on-surface font-bold tracking-tight" id="selectedCount">1 Clip Selected</span>
+</div>
+<span class="font-label-mono text-[10px] text-on-surface-variant">Est. Render: 14s</span>
+</div>
+<!-- Render Action Button (Gradient Violet with Specular Flare) -->
+<button class="relative group overflow-hidden px-5 py-3 rounded-full bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-on-primary font-headline-md text-[14px] font-bold shadow-[0_0_24px_rgba(124,58,237,0.5)] active:scale-95 transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed animate-spin" style="animation-duration: 3s;">bolt</span>
+<span class="tracking-tight">Export Selected</span>
+<span class="px-1.5 py-0.5 rounded bg-black/30 font-label-mono text-[10px] text-secondary tracking-tight">2 CR</span>
+</button>
+</div>
+</div>
+<script>
+    // Lightweight micro-interaction handlers
+    const playBtn = document.getElementById('playBtn');
+    if (playBtn) {
+      playBtn.addEventListener('click', function() {
+        const icon = this.querySelector('span');
+        if (icon.textContent.trim() === 'play_arrow') {
+          icon.textContent = 'pause';
+        } else {
+          icon.textContent = 'play_arrow';
+        }
+      });
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="home-showcase" href="#"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">video_library</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Projects</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-secondary" data-path="studio-workspace" href="#"><span class="material-symbols-outlined text-[24px]">movie_edit</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Studio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="credits" href="#"><span class="material-symbols-outlined text-[24px]">bolt</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Credits</span></a></div></nav><script>
+document.getElementById('logout-btn')?.addEventListener('click', () => {
+    fetch('/api/auth/logout', {method: 'POST'}).then(() => location.href = '/');
+});
+</script>
+</body></html>

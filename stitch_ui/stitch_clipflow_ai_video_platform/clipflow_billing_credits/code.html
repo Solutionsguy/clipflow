@@ -1,0 +1,492 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><link href="/static/css/tailwind.css" rel="stylesheet"><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><title>ClipFlow</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-shrink-0"><img alt="ClipFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XqsLzYcqdg-NlX-G1aqrzSNnYozq7Wv0r-3NbMB9sq9cOnuJyDySSPjXntPDxcoeoY7-Tv6de6ZANIK1rqpCYK8KZs2otI0V37kjf9BUj5YwwPtlxpT3c9BAxd3zqprXn6wfuFDyAoufVmGLA3CotajyQ51ypCW24zE9tYjW47jbtJoXDAW4UGSSRl1ZZoNrT1jTfQUPLV6r0zpvC45Qjc_jJC3WtTLxj9_g1HZy1Jc3rDuHIF6BErUg"><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight bg-gradient-to-r from-primary via-primary-fixed to-secondary bg-clip-text text-transparent">ClipFlow</span><span class="font-label-mono text-label-mono text-on-surface-variant/70 tracking-wider uppercase -mt-1 truncate max-w-[90px]">Credits</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><a class="h-9 pl-space-sm pr-space-xs rounded-full bg-surface-container/90 backdrop-blur-md flex items-center gap-space-xs shadow-[0_0_12px_rgba(76,215,246,0.25)] hover:shadow-[0_0_16px_rgba(210,187,255,0.4)] transition-all" data-path="credits" href="#"><span class="material-symbols-outlined text-secondary text-[18px] animate-pulse">bolt</span><span class="font-readout-num text-readout-num text-on-surface font-semibold">45</span><span class="font-label-mono text-[10px] text-on-surface-variant font-medium uppercase tracking-tighter">CR</span><div class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center ml-0.5"><span class="material-symbols-outlined text-[14px] leading-none">add</span></div></a><div class="p-0.5 rounded-full bg-gradient-to-tr from-primary to-secondary shadow-[0_0_10px_rgba(124,58,237,0.35)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5x33fVC1NLZvubHjXCXMkrgY7NLt0YF7ejojty9ngVT7FdEG8PUPc_ri-YulsdRGhyGeX8tTJSwMOJmRjQzW9gC9VSWWkANaj2ZRyXxskz_LsoM763zEq0IWZP_5kEF8Jp7Carcjzw2-_lkB3mIZG0XvVbK0fci2fT1tLKFVzIam95q1E7AjEOCr3tIO-aLG1Vy9ex5NihxKvuXJ_5IaZkP5j0wE03iy6w86ArMyoKAiC8EkYCv2Q"></div><button id="logout-btn" class="ml-2 px-2 py-1 text-sm text-on-surface-variant hover:text-on-surface">Logout</button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-space-xl space-y-space-lg">
+<!-- Atmospheric Glow Accent -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-32 bg-primary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-10 right-4 w-48 h-28 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Header Balance Tracker Card -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md shadow-xl overflow-hidden backdrop-blur-md">
+<!-- Decorative top specular hairline gradient via background layering -->
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-secondary to-primary opacity-70"></div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+            Available Balance
+          </span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="material-symbols-outlined text-secondary text-[26px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-display-mobile text-display-mobile text-on-surface font-extrabold tracking-tight">45</span>
+<span class="font-headline-md text-headline-md text-primary font-bold ml-0.5">Credits</span>
+</div>
+</div>
+<!-- Token Status Pill -->
+<div class="px-space-sm py-1 rounded-full bg-surface-container-high text-secondary flex items-center gap-1 shadow-inner">
+<span class="material-symbols-outlined text-[14px]">auto_videocam</span>
+<span class="font-label-pill text-label-pill">Active Pro</span>
+</div>
+</div>
+<!-- Equivalence Callout -->
+<div class="bg-surface-container/70 rounded-lg p-space-sm flex items-center gap-space-sm mb-space-md shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">movie_filter</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">
+            ≈ 22 High-Definition Viral Clips remaining
+          </span>
+<span class="font-label-mono text-[10px] text-on-surface-variant">Includes AI Hook Detection &amp; 1080p 60fps</span>
+</div>
+</div>
+<!-- Cycle Consumption Meter -->
+<div class="space-y-1.5 mb-space-md">
+<div class="flex justify-between items-center font-label-mono text-[11px]">
+<span class="text-on-surface-variant">Cycle Usage: May 1 – May 31</span>
+<span class="text-on-surface font-semibold">55 / 100 Used (45%)</span>
+</div>
+<!-- Multi-segment glowing progress rail -->
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-primary-container via-primary to-secondary rounded-full" style="width: 55%;"></div>
+</div>
+</div>
+<!-- Auto-refill Interactive Row -->
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest/50 -mx-space-md -mb-space-md px-space-md py-space-sm rounded-b-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">sync_saved_locally</span>
+<div class="flex flex-col">
+<span class="font-label-pill text-label-pill text-on-surface">Auto-refill when below 10 credits</span>
+<span class="font-label-mono text-[10px] text-on-surface-variant">Triggers 50-credit instant top-up</span>
+</div>
+</div>
+<button aria-pressed="true" class="w-11 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors focus:outline-none shadow-sm" id="toggle-autorefill" type="button">
+<div class="w-5 h-5 bg-on-primary-container rounded-full shadow-md transform translate-x-5 transition-transform flex items-center justify-center" id="toggle-autorefill-knob">
+<span class="material-symbols-outlined text-primary-container text-[12px] font-bold">check</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Dual Mode Purchasing Switcher -->
+<div class="w-full bg-surface-container-lowest p-1 rounded-xl shadow-inner flex gap-1">
+<button class="flex-1 py-2 rounded-lg font-label-pill text-label-pill font-bold transition-all bg-surface-container-high text-on-surface shadow-md flex items-center justify-center gap-1.5" id="tab-btn-plans">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span>
+      Monthly Plans
+    </button>
+<button class="flex-1 py-2 rounded-lg font-label-pill text-label-pill font-bold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="tab-btn-bundles">
+<span class="material-symbols-outlined text-[16px] text-secondary">token</span>
+      Credit Bundles
+      <span class="bg-tertiary-container/30 text-on-tertiary-container font-label-mono text-[9px] px-1.5 py-0.5 rounded-full uppercase tracking-tighter">No Expiry</span>
+</button>
+</div>
+<!-- VIEW A: Monthly SaaS Subscription Plans -->
+<div class="space-y-space-md transition-all" id="view-plans">
+<!-- Plan 1: Creator Pass -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface block">Creator Pass</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Casual Viral Growth</span>
+</div>
+<div class="text-right">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-extrabold">$19</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/mo</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-readout-num text-readout-num mb-space-sm">
+<span class="material-symbols-outlined text-[15px]">bolt</span>
+<span class="">120 Credits / month</span>
+<span class="text-on-surface-variant font-body-sm">(~60 shorts)</span>
+</div>
+<ul class="space-y-2 mb-space-md font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="text-on-surface">1080p 60fps clean audio export</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="">ClipFlow AI viral hook engine</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="">Auto-captions with Hormozi kinetic styles</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-highest text-on-surface font-label-pill text-label-pill font-bold hover:bg-surface-bright transition-all flex items-center justify-center gap-2 shadow-sm">
+<span class="">Switch to Creator Pass</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Plan 2: Pro Studio (Most Popular) -->
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-2xl relative flex flex-col justify-between overflow-hidden">
+<!-- Glow ambient backdrop -->
+<div class="absolute -top-10 -right-10 w-36 h-36 bg-secondary/20 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Top illuminated gradient bar -->
+<div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-secondary via-primary to-secondary-container"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Pro Studio</span>
+<!-- Popular Badge with glow simulation -->
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-mono text-[10px] font-semibold tracking-wider uppercase shadow-[0_0_12px_rgba(76,215,246,0.3)]">
+                Most Popular
+              </span>
+</div>
+<span class="font-label-mono text-label-mono text-secondary-fixed-dim uppercase">Power Creators &amp; Agencies</span>
+</div>
+<div class="text-right">
+<span class="font-display-mobile text-display-mobile text-secondary font-black leading-none">$49</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">/mo</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-secondary font-readout-num text-readout-num mb-space-sm shadow-inner">
+<span class="material-symbols-outlined text-[16px] text-secondary animate-spin" style="animation-duration: 4s;">token</span>
+<span class="font-bold text-on-surface">400 Credits / month</span>
+<span class="text-secondary-fixed-dim font-body-sm">(~200 shorts)</span>
+</div>
+<ul class="space-y-2 mb-space-lg font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-semibold text-on-surface">Priority GPU Queue (Instant 4x render)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">Ultra HD 4K 60fps Multi-Aspect Export</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="">Bulk batch extraction (up to 10 clips at once)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="text-on-surface-variant">Custom brand typography, watermark removal &amp; SVG overlays</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-3 rounded-lg bg-gradient-to-r from-primary-container via-inverse-primary to-primary text-on-primary font-label-pill text-label-pill font-bold hover:shadow-[0_0_24px_rgba(124,58,237,0.5)] transition-all flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span class="">Upgrade to Pro</span>
+</button>
+</div>
+</div>
+<!-- VIEW B: One-Time Credit Top-Up Bundles (Hidden by default or toggled) -->
+<div class="space-y-space-sm hidden transition-all" id="view-bundles">
+<div class="px-space-xs mb-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Wholesale Credit Packs · No Expiration Date</span>
+</div>
+<!-- Bundle 1 -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md shadow-md flex items-center justify-between transition-all cursor-pointer group">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">50 Credits</span>
+</div>
+<span class="font-label-mono text-[11px] text-on-surface-variant">≈ 25 viral video cuts</span>
+<span class="font-readout-num text-[11px] text-secondary">$0.18 per clip</span>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">$9</span>
+<button class="mt-1 px-3 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-pill text-label-pill group-hover:bg-primary group-hover:text-on-primary transition-colors">
+          Buy Pack
+        </button>
+</div>
+</div>
+<!-- Bundle 2 (Best Value) -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-xl flex items-center justify-between relative overflow-hidden group">
+<!-- Specular glow corner -->
+<div class="absolute top-0 right-0 w-24 h-24 bg-tertiary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-center gap-space-sm pl-1">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">150 Credits</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-mono text-[9px] font-bold uppercase">+25 FREE</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-pill text-[10px] px-1.5 py-0.2 rounded bg-tertiary/20 text-tertiary font-bold uppercase">Best Value</span>
+<span class="font-label-mono text-[11px] text-on-surface-variant">175 clips total</span>
+</div>
+<span class="font-readout-num text-[11px] text-tertiary font-semibold">$0.14 per clip</span>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-black text-tertiary">$24</span>
+<button class="mt-1 px-3.5 py-1.5 rounded-lg bg-tertiary text-on-tertiary font-label-pill text-label-pill font-bold shadow-md hover:bg-tertiary-fixed transition-colors">
+          Purchase
+        </button>
+</div>
+</div>
+<!-- Bundle 3 (Agency Power Pack) -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md shadow-md flex items-center justify-between transition-all cursor-pointer group">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">dataset</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">500 Credits</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary font-label-mono text-[9px] font-bold uppercase">+100 FREE</span>
+</div>
+<span class="font-label-mono text-[11px] text-on-surface-variant">Agency Wholesale Tier</span>
+<span class="font-readout-num text-[11px] text-secondary font-semibold">$0.11 per clip (Lowest Rate)</span>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">$69</span>
+<button class="mt-1 px-3 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-pill text-label-pill group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+          Buy Pack
+        </button>
+</div>
+</div>
+</div>
+<!-- Payment Method Toggle & Selector Surface -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">payments</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Payment Method</span>
+</div>
+<span class="font-label-mono text-[10px] text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span> 256-Bit Encrypted
+      </span>
+</div>
+<!-- Payment Type Segment Switcher -->
+<div class="grid grid-cols-2 gap-1.5 p-1 bg-surface-container-lowest rounded-lg">
+<button class="py-2 px-2 rounded-md font-label-pill text-label-pill font-bold transition-all bg-surface-container-high text-on-surface shadow-sm flex items-center justify-center gap-1.5" id="pay-method-card">
+<span class="material-symbols-outlined text-[16px]">credit_card</span>
+<span class="">Card / Apple Pay</span>
+</button>
+<button class="py-2 px-2 rounded-md font-label-pill text-label-pill font-bold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="pay-method-mpesa">
+<span class="material-symbols-outlined text-[16px] text-tertiary">smartphone</span>
+<span class="">Mobile (M-PESA)</span>
+</button>
+</div>
+<!-- Sub-form: Card / Stripe View -->
+<div class="space-y-space-sm" id="payment-card-subform">
+<div class="flex items-center justify-between px-space-xs text-on-surface-variant font-label-mono text-[11px]">
+<span class="">Accepted Gateways</span>
+<div class="flex items-center gap-2">
+<!-- Supported Brands Styled Badges -->
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold text-[9px]">VISA</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold text-[9px]">MC</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold text-[9px]">APPLE PAY</span>
+</div>
+</div>
+<!-- Quick 1-Click Digital Wallet Option -->
+<button class="w-full py-2.5 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-pill text-label-pill flex items-center justify-center gap-2 shadow-inner transition-colors">
+<span class="material-symbols-outlined text-[18px]">contactless</span>
+<span class="">Pay with Apple Pay or Google Pay</span>
+</button>
+<!-- Standard Card Inset Input -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm space-y-2 shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">Card Number</span>
+<span class="font-label-mono text-[10px] text-secondary">Stripe Protected</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-readout-num text-readout-num">
+<span class="material-symbols-outlined text-[18px] text-outline">credit_card</span>
+<input class="bg-transparent text-on-surface w-full focus:outline-none font-readout-num" readonly="" type="text" value="•••• •••• •••• 4242">
+<span class="font-label-mono text-[11px] text-on-surface-variant">12/28</span>
+</div>
+</div>
+</div>
+<!-- Sub-form: M-PESA STK Push View (Hidden initially) -->
+<div class="space-y-space-sm hidden" id="payment-mpesa-subform">
+<div class="bg-tertiary-container/15 rounded-lg p-space-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px] flex-shrink-0 mt-0.5">touch_app</span>
+<div class="flex flex-col">
+<span class="font-label-pill text-label-pill text-on-tertiary-container font-semibold">Instant STK Push Prompt</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">A prompt will automatically appear on your handset to authorize with your M-PESA PIN.</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-[10px] text-on-surface-variant uppercase" for="mpesa-phone">Safaricom Mobile Number</label>
+<div class="relative bg-surface-container-lowest rounded-lg p-2.5 flex items-center gap-2 shadow-inner">
+<span class="font-label-mono text-readout-num text-tertiary font-bold">+254</span>
+<input class="bg-transparent text-on-surface placeholder:text-outline focus:outline-none w-full font-readout-num text-readout-num tracking-wider" id="mpesa-phone" placeholder="712 345 678" type="tel">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-tertiary text-on-tertiary font-label-pill text-label-pill font-bold shadow-md hover:bg-tertiary-fixed transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+<span class="">Send STK Push Request</span>
+</button>
+</div>
+</div>
+<!-- Credit Ledger / Transaction History Table -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Credit Ledger</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Live Audit</span>
+</div>
+<!-- History List Stack -->
+<div class="space-y-2">
+<!-- Item 1: Purchase -->
+<div class="bg-surface-container/60 hover:bg-surface-container rounded-lg p-space-sm flex items-center justify-between transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/30 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-pill text-label-pill text-on-surface font-semibold truncate">Credit Pack Purchase</span>
+<span class="font-label-mono text-[9px] px-1 py-0.2 rounded bg-tertiary-container text-on-tertiary-container font-bold">Success</span>
+</div>
+<span class="font-label-mono text-[10px] text-on-surface-variant">Today, 14:32 · Visa ending 4242 ($9.00)</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<span class="font-readout-num text-readout-num font-bold text-tertiary">+50 CR</span>
+</div>
+</div>
+<!-- Item 2: Deducted -->
+<div class="bg-surface-container/60 hover:bg-surface-container rounded-lg p-space-sm flex items-center justify-between transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-pill text-label-pill text-on-surface font-semibold truncate">All-In Ep 174 Clip #1</span>
+<span class="font-label-mono text-[9px] px-1 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-medium">Deducted</span>
+</div>
+<span class="font-label-mono text-[10px] text-on-surface-variant">Yesterday · 1080p 60fps Render</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<span class="font-readout-num text-readout-num font-bold text-on-surface-variant">-2 CR</span>
+</div>
+</div>
+<!-- Item 3: Deducted -->
+<div class="bg-surface-container/60 hover:bg-surface-container rounded-lg p-space-sm flex items-center justify-between transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-pill text-label-pill text-on-surface font-semibold truncate">Lex Fridman Clip #3</span>
+<span class="font-label-mono text-[9px] px-1 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-medium">Deducted</span>
+</div>
+<span class="font-label-mono text-[10px] text-on-surface-variant">3 days ago · Hormozi Subtitles</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<span class="font-readout-num text-readout-num font-bold text-on-surface-variant">-2 CR</span>
+</div>
+</div>
+<!-- Item 4: Bonus Credited -->
+<div class="bg-surface-container/60 hover:bg-surface-container rounded-lg p-space-sm flex items-center justify-between transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-primary-container/30 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-pill text-label-pill text-on-surface font-semibold truncate">Welcome Bonus</span>
+<span class="font-label-mono text-[9px] px-1 py-0.2 rounded bg-primary-container/40 text-on-primary-container font-semibold">Credited</span>
+</div>
+<span class="font-label-mono text-[10px] text-on-surface-variant">May 10 · Early Adopter Perks</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<span class="font-readout-num text-readout-num font-bold text-primary">+5 CR</span>
+</div>
+</div>
+</div>
+<!-- Download Invoices Link -->
+<button class="w-full pt-space-xs text-center font-label-mono text-[11px] text-secondary hover:text-primary transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span class="">Download Tax Statements (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Client Micro-Interactions Script -->
+<script>
+  (function() {
+    // Mode Switching: Monthly Plans vs Bundles
+    const tabPlans = document.getElementById('tab-btn-plans');
+    const tabBundles = document.getElementById('tab-btn-bundles');
+    const viewPlans = document.getElementById('view-plans');
+    const viewBundles = document.getElementById('view-bundles');
+
+    if (tabPlans && tabBundles && viewPlans && viewBundles) {
+      tabPlans.addEventListener('click', () => {
+        tabPlans.className = 'flex-1 py-2 rounded-lg font-label-pill text-label-pill font-bold transition-all bg-surface-container-high text-on-surface shadow-md flex items-center justify-center gap-1.5';
+        tabBundles.className = 'flex-1 py-2 rounded-lg font-label-pill text-label-pill font-bold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+        viewPlans.classList.remove('hidden');
+        viewBundles.classList.add('hidden');
+      });
+
+      tabBundles.addEventListener('click', () => {
+        tabBundles.className = 'flex-1 py-2 rounded-lg font-label-pill text-label-pill font-bold transition-all bg-surface-container-high text-on-surface shadow-md flex items-center justify-center gap-1.5';
+        tabPlans.className = 'flex-1 py-2 rounded-lg font-label-pill text-label-pill font-bold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+        viewBundles.classList.remove('hidden');
+        viewPlans.classList.add('hidden');
+      });
+    }
+
+    // Payment Method Switching: Card vs M-PESA
+    const payCard = document.getElementById('pay-method-card');
+    const payMpesa = document.getElementById('pay-method-mpesa');
+    const subCard = document.getElementById('payment-card-subform');
+    const subMpesa = document.getElementById('payment-mpesa-subform');
+
+    if (payCard && payMpesa && subCard && subMpesa) {
+      payCard.addEventListener('click', () => {
+        payCard.className = 'py-2 px-2 rounded-md font-label-pill text-label-pill font-bold transition-all bg-surface-container-high text-on-surface shadow-sm flex items-center justify-center gap-1.5';
+        payMpesa.className = 'py-2 px-2 rounded-md font-label-pill text-label-pill font-bold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+        subCard.classList.remove('hidden');
+        subMpesa.classList.add('hidden');
+      });
+
+      payMpesa.addEventListener('click', () => {
+        payMpesa.className = 'py-2 px-2 rounded-md font-label-pill text-label-pill font-bold transition-all bg-surface-container-high text-on-surface shadow-sm flex items-center justify-center gap-1.5';
+        payCard.className = 'py-2 px-2 rounded-md font-label-pill text-label-pill font-bold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+        subMpesa.classList.remove('hidden');
+        subCard.classList.add('hidden');
+      });
+    }
+
+    // Auto-Refill Toggle Switch Micro-interaction
+    const refillToggle = document.getElementById('toggle-autorefill');
+    const refillKnob = document.getElementById('toggle-autorefill-knob');
+    let refillActive = true;
+
+    if (refillToggle && refillKnob) {
+      refillToggle.addEventListener('click', () => {
+        refillActive = !refillActive;
+        if (refillActive) {
+          refillToggle.classList.remove('bg-surface-container-highest');
+          refillToggle.classList.add('bg-primary-container');
+          refillKnob.classList.remove('translate-x-0');
+          refillKnob.classList.add('translate-x-5');
+        } else {
+          refillToggle.classList.remove('bg-primary-container');
+          refillToggle.classList.add('bg-surface-container-highest');
+          refillKnob.classList.remove('translate-x-5');
+          refillKnob.classList.add('translate-x-0');
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="home-showcase" href="#"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">video_library</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Projects</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="studio-workspace" href="#"><span class="material-symbols-outlined text-[24px]">movie_edit</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Studio</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-secondary" data-path="credits" href="#"><span class="material-symbols-outlined text-[24px]">bolt</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Credits</span></a></div></nav>
+
+<script>
+document.getElementById('logout-btn')?.addEventListener('click', () => {
+    fetch('/api/auth/logout', {method: 'POST'}).then(() => location.href = '/');
+});
+</script>
+</body></html>

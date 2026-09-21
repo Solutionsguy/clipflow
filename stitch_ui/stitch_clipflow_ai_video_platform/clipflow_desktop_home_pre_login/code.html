@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><link href="/static/css/tailwind.css" rel="stylesheet"><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background font-body-md text-body-md text-on-background selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><a class="flex items-center gap-space-sm group" data-path="clipflow-marketing-homepage" href="#"><img alt="Brand logo. - Primary color: #7c3aed
+- Font: plusJakartaSans
+- Mode: dark
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XqsLzYcqdg-NlX-G1aqrzSNnYozq7Wv0r-3NbMB9sq9cOnuJyDySSPjXntPDxcoeoY7-Tv6de6ZANIK1rqpCYK8KZs2otI0V37kjf9BUj5YwwPtlxpT3c9BAxd3zqprXn6wfuFDyAoufVmGLA3CotajyQ51ypCW24zE9tYjW47jbtJoXDAW4UGSSRl1ZZoNrT1jTfQUPLV6r0zpvC45Qjc_jJC3WtTLxj9_g1HZy1Jc3rDuHIF6BErUg"/><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface group-hover:text-primary transition-colors">ClipFlow</span></a><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-md rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-headline-md rounded-lg" data-path="clipflow-marketing-homepage" href="#">Features</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="how-it-works" href="#">How It Works</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="pricing-and-credits" href="#">Pricing</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="creator-testimonials" href="#">Testimonials</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high/90 backdrop-blur-md"><span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#4cd7f6]"></span><span class="font-label-mono text-label-mono uppercase text-secondary-fixed-dim">AI Engine Online</span></div><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="sign-in" href="#">Sign In</a><a class="relative group inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-on-primary-container font-headline-md text-label-pill uppercase tracking-wider shadow-[0_0_20px_-3px_rgba(124,58,237,0.5)] hover:shadow-[0_0_24px_rgba(124,58,237,0.75)] hover:brightness-110 transition-all active:scale-95" data-path="get-5-free-credits" href="#"><span class="material-symbols-outlined text-[18px] text-tertiary">bolt</span><span>Get 5 Free Credits</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full relative overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-gradient-to-b from-primary-container/20 via-secondary/15 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<div class="absolute top-[800px] -left-60 w-[600px] h-[600px] bg-tertiary-container/15 blur-3xl pointer-events-none rounded-full"></div>
+<div class="absolute top-[1600px] -right-60 w-[700px] h-[700px] bg-primary-container/15 blur-3xl pointer-events-none rounded-full"></div>
+<section class="relative w-full px-margin pt-space-xl pb-space-xl flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high/90 shadow-md backdrop-blur-xl mb-space-lg hover:bg-surface-container-highest transition-all cursor-pointer">
+<span class="flex h-2 w-2 rounded-full bg-tertiary shadow-[0_0_10px_#4edea3] animate-pulse"></span>
+<span class="font-label-mono text-label-mono uppercase text-tertiary">ClipFlow 3.0 Live</span>
+<span class="text-outline">/</span>
+<span class="font-body-sm text-body-sm text-on-surface">Multi-cam Face Tracking &amp; Instant Viral Hooks</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</div>
+<h1 class="font-display text-display max-w-5xl tracking-tight leading-[1.04] text-on-surface mb-space-md">
+      Turn Any Long Video Into <br/>
+<span class="bg-gradient-to-r from-secondary via-primary to-tertiary bg-clip-text text-transparent">10 Viral Shorts.</span> Automatically.
+    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-space-xl leading-relaxed">
+      The ultimate AI clipping studio for YouTubers, podcasters, and streamers. Transcribe, detect viral moments, auto-reframe to 9:16, and burn kinetic captions in under 40 seconds.
+    </p>
+<div class="w-full max-w-3xl relative flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm p-space-xs rounded-full bg-surface-container-high shadow-2xl backdrop-blur-xl">
+<div class="pl-space-md flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[24px]">link</span>
+</div>
+<input class="flex-1 bg-transparent border-0 outline-none text-on-surface placeholder:text-outline font-body-md text-body-md py-space-sm px-space-xs min-w-0" id="urlInput" placeholder="Paste YouTube, Twitch, Kick, or Vimeo URL..." type="url"/>
+<button class="px-space-lg py-space-md rounded-full bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-on-primary font-headline-md text-label-pill uppercase tracking-wider shadow-xl hover:brightness-110 hover:shadow-[0_0_24px_rgba(124,58,237,0.6)] active:scale-95 transition-all shrink-0 flex items-center gap-space-xs" id="generateBtn" onclick="triggerDemoClip()">
+<span class="material-symbols-outlined text-[18px]">auto_videocam</span>
+<span>Generate 10 Clips Free</span>
+</button>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
+<span class="font-label-mono text-label-mono uppercase text-outline">Quick Samples:</span>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary px-space-sm py-space-xs rounded-md bg-surface-container-low hover:bg-surface-container transition-colors" onclick="setSample('https://youtube.com/watch?v=lex-fridman-sam-altman')">
+          ⚡ Lex Fridman × Altman
+        </button>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary px-space-sm py-space-xs rounded-md bg-surface-container-low hover:bg-surface-container transition-colors" onclick="setSample('https://youtube.com/watch?v=all-in-podcast-e180')">
+          🎙️ All-In Podcast Ep. 182
+        </button>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary px-space-sm py-space-xs rounded-md bg-surface-container-low hover:bg-surface-container transition-colors" onclick="setSample('https://youtube.com/watch?v=mrbeast-7-days-stranded')">
+          🔥 MrBeast 7 Days Stranded
+        </button>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-xl mt-space-xl pt-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-tertiary">verified</span>
+<span class="font-body-sm text-body-sm">No credit card needed</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">flash_on</span>
+<span class="font-body-sm text-body-sm">Rendered in 4K 60FPS</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span>
+<span class="font-body-sm text-body-sm">500,000+ clips syndicated</span>
+</div>
+</div>
+</section>
+<section class="w-full px-margin py-space-xl">
+<div class="w-full rounded-xl bg-surface-container-low p-space-md md:p-space-lg shadow-2xl relative">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-error animate-pulse"></div>
+<span class="font-headline-md text-headline-md text-on-surface">Interactive AI Multi-Cam Reframe Engine</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-secondary font-label-mono text-label-mono uppercase">Batch v3.0</span>
+</div>
+<div class="flex items-center gap-space-xs font-readout-num text-readout-num text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">memory</span>
+<span>GPU Processing: 00:38 / 1:45:00 full source</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-xs">
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-lowest shadow-inner group">
+<div class="w-full h-full bg-cover bg-center" data-alt="High quality cinema widescreen shot of two tech podcast hosts in deep conversation with neon backlighting and pro microphones" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQuBOgHCQ13X1h55OQSZbKkkTZ3rDMtBMiOR3bfxd8WVONYfbAvdRzGCAUnJRv80J5HMqCZq-FXXNKLlnRUa7xUCYHJQnXG7SPgZWKC9aJeVVCN0OBS9v0I5CGgFAgSd2ZX63ZPi4r_bJNm24fdRnqqQRXK1UKOSVC_25Ki2V81yQjab77f_bbCn0Juijp0t5_NdzSV6TNbOS84wJQhm5bCbh-xrteof543mBZmCtWCK4wwqsqPZ_E')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex flex-col justify-between p-space-md">
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-space-xs rounded bg-surface-container-highest/80 font-label-mono text-label-mono text-on-surface">16:9 RAW MASTER</span>
+<span class="px-space-xs py-space-xs rounded bg-error/90 font-label-mono text-label-mono text-on-error flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> TRACKING ACTIVE
+                </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="w-36 h-28 rounded-md bg-secondary/20 shadow-[0_0_12px_#4cd7f6] flex flex-col justify-between p-1">
+<span class="font-label-mono text-label-mono text-secondary">SPEAKER A (98.4%)</span>
+<span class="font-label-mono text-label-mono text-secondary self-end">9:16 CROP BOX</span>
+</div>
+<div class="w-36 h-28 rounded-md bg-primary/20 shadow-[0_0_12px_#d2bbff] flex flex-col justify-between p-1">
+<span class="font-label-mono text-label-mono text-primary">SPEAKER B (96.1%)</span>
+<span class="font-label-mono text-label-mono text-primary self-end">REACTION CAM</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-label-mono text-label-mono text-outline">
+<span>AUDIO HOOK DETECTION WAVEFORM</span>
+<span class="text-tertiary">+14dB LAUGHTER / SPIKE PEAK</span>
+</div>
+<div class="h-10 w-full flex items-end gap-1 px-1">
+<div class="flex-1 bg-surface-variant h-3 rounded-t-sm"></div>
+<div class="flex-1 bg-surface-variant h-5 rounded-t-sm"></div>
+<div class="flex-1 bg-surface-variant h-4 rounded-t-sm"></div>
+<div class="flex-1 bg-secondary h-8 rounded-t-sm shadow-[0_0_8px_#4cd7f6]"></div>
+<div class="flex-1 bg-secondary h-10 rounded-t-sm shadow-[0_0_8px_#4cd7f6]"></div>
+<div class="flex-1 bg-secondary h-9 rounded-t-sm shadow-[0_0_8px_#4cd7f6]"></div>
+<div class="flex-1 bg-tertiary h-10 rounded-t-sm shadow-[0_0_8px_#4edea3]"></div>
+<div class="flex-1 bg-surface-variant h-5 rounded-t-sm"></div>
+<div class="flex-1 bg-surface-variant h-4 rounded-t-sm"></div>
+<div class="flex-1 bg-primary h-7 rounded-t-sm"></div>
+<div class="flex-1 bg-surface-variant h-3 rounded-t-sm"></div>
+<div class="flex-1 bg-surface-variant h-6 rounded-t-sm"></div>
+<div class="flex-1 bg-secondary h-8 rounded-t-sm"></div>
+<div class="flex-1 bg-surface-variant h-4 rounded-t-sm"></div>
+<div class="flex-1 bg-surface-variant h-2 rounded-t-sm"></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="rounded-xl bg-surface-container p-space-sm flex flex-col gap-space-sm hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+<div class="relative w-full aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center" data-alt="Vertical mobile 9:16 framing of an animated excited entrepreneur speaker reacting vividly under warm studio key light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6tNSeQrV5elfJXqhtCp2UQqOe0LiEun-4oa-ee1OWbOy9nUAK16nKa6Tti-pOgiJhYm_pY9L2bZMDL7ls12QwGtUJAp5yDHxl3RNlGUFjuGcJJQavDYirhZBdiMZyi8FGB4ZTFk1pVp5GdL7HNtsGmTYCVUp0qCajmRWkNF51wbdd0_ni2S70kuMoU0ymiecwdlq15MpmmZeCFnK_QQRoVEed0MmGy3AeCrgyZ7J0kjl6CX0-3MWZ')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90 flex flex-col justify-between p-space-sm">
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-space-xs rounded-full bg-tertiary-container text-on-tertiary-container font-label-mono text-label-mono flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> 98% VIRAL
+                  </span>
+<span class="font-readout-num text-readout-num text-on-surface bg-surface-container-highest/80 px-space-xs rounded">00:34</span>
+</div>
+<div class="text-center px-space-xs pb-space-sm">
+<p class="font-headline-md text-headline-md tracking-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] uppercase">
+                    THIS IS <span class="text-tertiary-fixed font-black">THE SECRET</span> TO SCALE! 🔥
+                  </p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-label-mono">
+<span class="text-on-surface">Clip 01 • Speaker Auto-Focus</span>
+<button class="text-secondary hover:underline flex items-center gap-space-xs">
+                Export <span class="material-symbols-outlined text-[14px]">share</span>
+</button>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container p-space-sm flex flex-col gap-space-sm hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+<div class="relative w-full aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center" data-alt="Vertical split screen interview layout showing conversational host and guest dynamic with vibrant neon caption overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYMkIXXB9XZjyBeXg3jfJ-eOeapV5IxLDAU7hRrf2tMKQIj5HA8DBhyCEyq2vb1TTWFj2CQCS5FLdt_THOKsrbFVXCNw_DLXGNkub5dkk8kGVxj8cCrzJ-Jgni6zvCYvjaMkTPOjRZPMPYGbkeSFzhWw3RrJTutT_9VfrhUxaY1sg5_ugHnt3UjURM46rYj2Q5HzqcJstWFGI2g-y3Yk1UcEI_3f12-LrZQdAwRE3kAG7SsI1g81sZ')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90 flex flex-col justify-between p-space-sm">
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-space-xs rounded-full bg-tertiary-container text-on-tertiary-container font-label-mono text-label-mono flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 95% VIRAL
+                  </span>
+<span class="font-readout-num text-readout-num text-on-surface bg-surface-container-highest/80 px-space-xs rounded">00:48</span>
+</div>
+<div class="text-center px-space-xs pb-space-sm">
+<p class="font-headline-md text-headline-md tracking-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] uppercase">
+                    THEY <span class="text-secondary font-black">CANNOT STOP</span> US NOW 🚀
+                  </p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-label-mono">
+<span class="text-on-surface">Clip 02 • Dual Split-Cam</span>
+<button class="text-secondary hover:underline flex items-center gap-space-xs">
+                Export <span class="material-symbols-outlined text-[14px]">share</span>
+</button>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container p-space-sm flex flex-col gap-space-sm hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+<div class="relative w-full aspect-[9/16] rounded-lg overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center" data-alt="Vertical smartphone view of dramatic moment in discussion with animated sound emoji and bold kinetic yellow subtitles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKU5ZAwkWaEKz3mJgadsEChhogJ9Jm4FSVFI4JoQrTRDeyKxIuCYrQSvDpv2hmMsI6QjtXKw_s1ZQZhQ4NCb8a_EeJtayw9f-TncmiFEkBCrWSQ-b9ZjEB9cMdqJq1Y7RnS22zG-CbiYBm3vio3EZX5AbKlRA8wzYymnXbKE5XdUfJ8S-n32Hxb8GhhGMLJUTCDFmfPx5rmIqwemL9phX3mqTMn46XbQnG4WySS-mbnMU-4kExpN2C')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/90 flex flex-col justify-between p-space-sm">
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-label-mono text-label-mono flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 92% VIRAL
+                  </span>
+<span class="font-readout-num text-readout-num text-on-surface bg-surface-container-highest/80 px-space-xs rounded">00:22</span>
+</div>
+<div class="text-center px-space-xs pb-space-sm">
+<p class="font-headline-md text-headline-md tracking-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] uppercase">
+                    “EVERYONE <span class="text-primary-fixed-dim font-black">MISSED THIS</span> STEP!”
+                  </p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-label-mono">
+<span class="text-on-surface">Clip 03 • Fast Hook Punch</span>
+<button class="text-secondary hover:underline flex items-center gap-space-xs">
+                Export <span class="material-symbols-outlined text-[14px]">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-margin py-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="font-label-mono text-label-mono uppercase text-secondary tracking-widest mb-space-xs">Supercharged Capabilities</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Engineered for Rapid Organic Growth</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">Stop paying $4,000/month to video agencies. Get cinema-grade reframing and captions in seconds.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">center_focus_strong</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Smart Face &amp; Speaker Tracking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Dual-camera intelligent zoom and real-time pan ensures both speaker and reactor stay centered in vertical orientation without crop distortion.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-primary font-label-mono text-label-mono">
+<span>AI Reframer 9:16</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">subtitles</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Retention Kinetic Captions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Choose from iconic Hormozi, MrBeast, and Cyber Glow typography styles with word-by-word highlights, sound swooshes, and b-roll inserts.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-secondary font-label-mono text-label-mono">
+<span>99.2% Transcription Accuracy</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">publish</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Direct Social Syndication</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Push finished viral clips straight to TikTok, YouTube Shorts, and Instagram Reels with optimized tags, SEO titles, and scheduled queue slots.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-tertiary font-label-mono text-label-mono">
+<span>One-Click Cross Posting</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">toll</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Non-Expiring Credit Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">No subscription trap. Credits purchased stay in your balance permanently, or subscribe to high-volume agency wholesale packages anytime.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-primary font-label-mono text-label-mono">
+<span>Rollover Guarantee</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-margin py-space-xl">
+<div class="w-full rounded-xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-space-xl shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs font-label-mono text-label-mono uppercase text-secondary">
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+<span>Efficiency &amp; ROI Simulator</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">See How Much Time &amp; Traffic You Reclaim</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Adjust your weekly output volume to see estimated hours saved from manual video editing, subtitle scrubbing, and framing workflows.
+          </p>
+<div class="flex flex-col gap-space-xs pt-space-sm">
+<div class="flex justify-between items-center font-headline-md text-headline-md text-on-surface">
+<span>Long-form Videos / Month:</span>
+<span class="text-secondary font-readout-num text-headline-md" id="videoCountDisplay">8 Videos</span>
+</div>
+<input class="w-full accent-secondary bg-surface-container-highest rounded-lg h-2 cursor-pointer" id="volumeSlider" max="30" min="1" oninput="updateCalculator(this.value)" type="range" value="8"/>
+<div class="flex justify-between font-label-mono text-label-mono text-outline">
+<span>1 Episode</span>
+<span>15 Episodes</span>
+<span>30 Episodes</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="rounded-xl bg-surface-container-highest/60 backdrop-blur-md p-space-lg flex flex-col justify-center">
+<span class="font-label-mono text-label-mono uppercase text-outline">Monthly Hours Saved</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-tertiary" id="hoursSavedVal">32</span>
+<span class="font-headline-md text-headline-md text-on-surface">Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Equal to 4 full work days reclaimed from Premiere / CapCut.</p>
+</div>
+<div class="rounded-xl bg-surface-container-highest/60 backdrop-blur-md p-space-lg flex flex-col justify-center">
+<span class="font-label-mono text-label-mono uppercase text-outline">Viral Clips Generated</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-secondary" id="clipsGenVal">80</span>
+<span class="font-headline-md text-headline-md text-on-surface">Shorts</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Ready for multi-platform distribution across 3 networks.</p>
+</div>
+<div class="rounded-xl bg-surface-container-highest/60 backdrop-blur-md p-space-lg flex flex-col justify-center">
+<span class="font-label-mono text-label-mono uppercase text-outline">Est. Channel Reach Boost</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-primary" id="reachVal">+420%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Derived from aggregated customer performance benchmarks.</p>
+</div>
+<div class="rounded-xl bg-surface-container-highest/60 backdrop-blur-md p-space-lg flex flex-col justify-center">
+<span class="font-label-mono text-label-mono uppercase text-outline">Agency Cost Replaced</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-on-surface" id="costVal">$2,400</span>
+<span class="font-body-sm text-body-sm text-outline">/mo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">ClipFlow costs an average of 95% less than hiring editors.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-margin py-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="font-label-mono text-label-mono uppercase text-tertiary tracking-widest mb-space-xs">Creator Wall of Love</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Trusted by Over 42,000 Top Creators</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">From underground indie podcasters to multimillion-subscriber YouTube institutions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “ClipFlow completely transformed our production pipeline. We used to spend three days cutting podcast episodes down for TikTok. Now, we paste our stream link and generate 15 high-retention clips before our coffee even cools down.”
+          </p>
+</div>
+<div class="flex items-center gap-space-md mt-space-lg pt-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a young male tech content creator smiling with neon purple ambient lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJYDd9NfBWDQz3uHaXIg0pTgbGYb35OQeLqyPl_R8qh1w7m12QvTmpACL4k4Sz-7xOVgEAKiNpPcMMGd6__qfaZJXcg8wICkApxQN7q6Tol1gE6dOGBBRRpj-D2pH9RYUKef2mDbiXTQ7zMNfJYwE2oKwnx5che765dYwf33vvwoDUewhren6x5wvqh8BXmLJOBH1ADBWfNBrbN8sdT9A6F9MMkKKVTDOrrtEUvT6Z4iSCBprzGWs9"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Julian Vance</span>
+<span class="font-label-mono text-label-mono text-outline">Host, The Frontier Podcast • 240k TikTok</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “The multi-cam speaker tracking is surgical. When someone interrupts or reacts, ClipFlow handles the cut smoothly without awkward center shifts. It’s basically an automated video editor on retainer.”
+          </p>
+</div>
+<div class="flex items-center gap-space-md mt-space-lg pt-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close-up creative portrait of a woman video director wearing studio headphones with cyber cyan light reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbwHaxdfBDgBDYov66dOcZ17gttW_OjBkSUcHuLZeJpgKVHFHVRWWXdLhpasFzkNx3Bbqld8ZIIr50hdvGzY0SHgUa5BKpiKoCk5EYVNbipEW-lEjKeJH3lZRow-6K9JpHYUanyCf88uLkwW8NHZE0IcRvQMxjcywZOHSCqQ1Tq-EpdYWuKl10E75R7xKPhqf0QtMEkkdQIsTZ37Gl0t67nnl9wXmL6ZcIdPjYCIYrv5EKKTUdu2Uq"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Maya Chen</span>
+<span class="font-label-mono text-label-mono text-outline">Lead Editor, Apex Media Agency • 1.2M Subs</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “We hit 4.8 million views on a single ClipFlow snippet on Instagram Reels last week. The viral hook score prediction is genuinely scarily accurate. It knows what humans will click.”
+          </p>
+</div>
+<div class="flex items-center gap-space-md mt-space-lg pt-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait of a modern gaming creator and streamer sitting at a high-end battlestation with warm amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCduAIKFsjMrgdt_DVU8w6p4cHVzvkbps6MGTpYq4Z0Ntu6PbKW5bb9GpnEJA5sG7I6IDvSmIiKovTFck8I46aRklE5yxUcteNXh5uscUb4dor0f96Bdq_dxg8hDLdv2MMk0UYpyvoX-B-Yx5E3GTnRT4qGKP9ndcQJi3StcQ_BYFJjmDfkOTDsd3DrvUsIUNCvk7OUyrRjeiE3jkrzstVrO-NoWzrk2AU7KsLuGPY5CFV1EcIUVs8I"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Marcus Kincaid</span>
+<span class="font-label-mono text-label-mono text-outline">Streamer &amp; Founder • 680k Multiplatform</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-margin py-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="font-label-mono text-label-mono uppercase text-primary tracking-widest mb-space-xs">Simple &amp; Transparent Credits</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Simple Plans. Credits Never Expire.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">Start 100% free with 5 credits. Upgrade or purchase standalone packs whenever you need high volume.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg items-stretch">
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Free Explorer</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Test the pipeline on your first podcast.</p>
+<div class="my-space-md">
+<span class="font-display text-display text-on-surface">$0</span>
+<span class="font-body-md text-body-md text-outline">/forever</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> 5 High-res Credits
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> 720p 60FPS Video Export
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Auto Subtitle Generator
+            </li>
+<li class="flex items-center gap-space-xs text-outline">
+<span class="material-symbols-outlined text-[18px]">close</span> Light ClipFlow Watermark
+            </li>
+</ul>
+</div>
+<a class="mt-space-lg w-full py-space-sm rounded-lg bg-surface-container-high text-on-surface text-center font-headline-md text-label-pill uppercase tracking-wider hover:bg-surface-container-highest transition-colors" data-path="get-5-free-credits" href="#">
+          Get Started
+        </a>
+</div>
+<div class="rounded-xl bg-surface-container p-space-lg shadow-2xl relative flex flex-col justify-between">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-space-md py-space-xs rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-primary font-label-mono text-label-mono uppercase shadow-md">
+          Most Popular
+        </div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Creator Pass</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">For solo creators and consistent YouTubers.</p>
+<div class="my-space-md">
+<span class="font-display text-display text-secondary">$19</span>
+<span class="font-body-md text-body-md text-outline">/month</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> 120 Viral Credits / Month
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> 1080p &amp; 4K Ultra HD Export
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> No Watermarks
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Hormozi &amp; Cyber Captions
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Unused Credits Rollover
+            </li>
+</ul>
+</div>
+<a class="mt-space-lg w-full py-space-sm rounded-lg bg-primary-container text-on-primary text-center font-headline-md text-label-pill uppercase tracking-wider shadow-lg hover:brightness-110 transition-all" data-path="get-5-free-credits" href="#">
+          Claim Creator Pass
+        </a>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Pro Studio</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">For weekly show producers and streamers.</p>
+<div class="my-space-md">
+<span class="font-display text-display text-tertiary">$49</span>
+<span class="font-body-md text-body-md text-outline">/month</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> 400 Viral Credits / Month
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Priority Turbo GPU Queue
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Multi-Cam Auto Pan &amp; Split
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Direct Social Auto-Post
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Custom Brand Typography Kits
+            </li>
+</ul>
+</div>
+<a class="mt-space-lg w-full py-space-sm rounded-lg bg-surface-container-high text-on-surface text-center font-headline-md text-label-pill uppercase tracking-wider hover:bg-surface-container-highest transition-colors" data-path="get-5-free-credits" href="#">
+          Upgrade to Pro
+        </a>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Agency Wholesale</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Scalable pool with API &amp; team seats.</p>
+<div class="my-space-md">
+<span class="font-display text-display text-primary">$149</span>
+<span class="font-body-md text-body-md text-outline">/month</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> 1,500 Credits Included
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Unlimited Team Seats
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Full Webhook &amp; REST API
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Custom Font &amp; Intro Upload
+            </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span> Dedicated Slack Architect
+            </li>
+</ul>
+</div>
+<a class="mt-space-lg w-full py-space-sm rounded-lg bg-surface-container-high text-on-surface text-center font-headline-md text-label-pill uppercase tracking-wider hover:bg-surface-container-highest transition-colors" data-path="pricing-and-credits" href="#">
+          Contact Enterprise
+        </a>
+</div>
+</div>
+</section>
+<section class="w-full px-margin py-space-xl text-center">
+<div class="w-full rounded-xl bg-gradient-to-b from-surface-container to-surface-container-lowest p-space-xl relative overflow-hidden shadow-2xl flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[36px]">rocket_launch</span>
+</div>
+<h2 class="font-display text-display max-w-2xl text-on-surface mb-space-sm leading-tight">
+        Ready to Put Your Content on Autopilot?
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-lg">
+        Join the next generation of digital media networks. Extract the most captivating hooks from your footage without editing a single frame.
+      </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-md">
+<a class="px-space-xl py-space-md rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-primary font-headline-md text-label-pill uppercase tracking-wider shadow-xl hover:brightness-110 active:scale-95 transition-all" data-path="get-5-free-credits" href="#">
+          Start With 5 Free Credits
+        </a>
+<a class="px-space-lg py-space-md rounded-full bg-surface-container-high text-on-surface font-headline-md text-label-pill uppercase tracking-wider hover:bg-surface-container-highest transition-colors" data-path="how-it-works" href="#">
+          Watch 90-sec Walkthrough
+        </a>
+</div>
+<div class="flex items-center gap-space-lg mt-space-xl font-label-mono text-label-mono text-outline">
+<span class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> 99.98% GPU Cluster Online
+        </span>
+<span>•</span>
+<span>SOC-2 Type II Certified</span>
+<span>•</span>
+<span>YouTube Partner API Ready</span>
+</div>
+</div>
+</section>
+<script>
+    function setSample(url) {
+      var input = document.getElementById('urlInput');
+      if (input) {
+        input.value = url;
+        input.focus();
+      }
+    }
+
+    function triggerDemoClip() {
+      var input = document.getElementById('urlInput');
+      var btn = document.getElementById('generateBtn');
+      if (!input.value) {
+        input.value = 'https://youtube.com/watch?v=lex-fridman-sam-altman';
+      }
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Analyzing Waveforms...';
+      setTimeout(function() {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span> 10 Clips Ready!';
+        setTimeout(function() {
+          btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">auto_videocam</span> Generate 10 Clips Free';
+        }, 3000);
+      }, 1500);
+    }
+
+    function updateCalculator(val) {
+      var count = parseInt(val, 10);
+      document.getElementById('videoCountDisplay').innerText = count + (count === 1 ? ' Video' : ' Videos');
+      document.getElementById('hoursSavedVal').innerText = count * 4;
+      document.getElementById('clipsGenVal').innerText = count * 10;
+      document.getElementById('reachVal').innerText = '+' + (count * 52) + '%';
+      document.getElementById('costVal').innerText = '$' + (count * 300).toLocaleString();
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_-1px_8px_rgba(0,0,0,0.3)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-lg text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-on-surface">ClipFlow</span><span class="font-body-sm text-body-sm">© 2024 AI Moment Engine Inc. All rights reserved.</span></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="hover:text-on-surface transition-colors" data-path="pricing-and-credits" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="clipflow-marketing-homepage" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="how-it-works" href="#">Documentation</a></div></div></footer></body></html>

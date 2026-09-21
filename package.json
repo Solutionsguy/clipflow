@@ -1,0 +1,18 @@
+{
+  "name": "clipflow-tailwind",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd dashboard && npm install",
+    "build:tailwind": "tailwindcss -i src/input.css -o static/css/tailwind.css --minify",
+    "build:dashboard": "cd dashboard && npm run build",
+    "build": "cd dashboard && npm install && npm run build",
+    "dev": "npm --prefix dashboard run dev",
+    "start": "uvicorn app:app --host 0.0.0.0 --port 8000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.15"
+  }
+}

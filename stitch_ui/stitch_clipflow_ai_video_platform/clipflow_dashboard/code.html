@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><link href="/static/css/tailwind.css" rel="stylesheet"><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><title>ClipFlow</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-shrink-0"><img alt="ClipFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XqsLzYcqdg-NlX-G1aqrzSNnYozq7Wv0r-3NbMB9sq9cOnuJyDySSPjXntPDxcoeoY7-Tv6de6ZANIK1rqpCYK8KZs2otI0V37kjf9BUj5YwwPtlxpT3c9BAxd3zqprXn6wfuFDyAoufVmGLA3CotajyQ51ypCW24zE9tYjW47jbtJoXDAW4UGSSRl1ZZoNrT1jTfQUPLV6r0zpvC45Qjc_jJC3WtTLxj9_g1HZy1Jc3rDuHIF6BErUg"><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight bg-gradient-to-r from-primary via-primary-fixed to-secondary bg-clip-text text-transparent">ClipFlow</span><span class="font-label-mono text-label-mono text-on-surface-variant/70 tracking-wider uppercase -mt-1 truncate max-w-[90px]">Projects Dashboard</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><a class="h-9 pl-space-sm pr-space-xs rounded-full bg-surface-container/90 backdrop-blur-md flex items-center gap-space-xs shadow-[0_0_12px_rgba(76,215,246,0.25)] hover:shadow-[0_0_16px_rgba(210,187,255,0.4)] transition-all" data-path="credits" href="#"><span class="material-symbols-outlined text-secondary text-[18px] animate-pulse">bolt</span><span class="font-readout-num text-readout-num text-on-surface font-semibold">45</span><span class="font-label-mono text-[10px] text-on-surface-variant font-medium uppercase tracking-tighter">CR</span><div class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center ml-0.5"><span class="material-symbols-outlined text-[14px] leading-none">add</span></div></a><div class="p-0.5 rounded-full bg-gradient-to-tr from-primary to-secondary shadow-[0_0_10px_rgba(124,58,237,0.35)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5x33fVC1NLZvubHjXCXMkrgY7NLt0YF7ejojty9ngVT7FdEG8PUPc_ri-YulsdRGhyGeX8tTJSwMOJmRjQzW9gC9VSWWkANaj2ZRyXxskz_LsoM763zEq0IWZP_5kEF8Jp7Carcjzw2-_lkB3mIZG0XvVbK0fci2fT1tLKFVzIam95q1E7AjEOCr3tIO-aLG1Vy9ex5NihxKvuXJ_5IaZkP5j0wE03iy6w86ArMyoKAiC8EkYCv2Q"></div><button id="logout-btn" class="ml-2 px-2 py-1 text-sm text-on-surface-variant hover:text-on-surface">Logout</button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile gap-space-md pb-space-lg">
+<!-- Ambient Top Glow Decoration -->
+<div class="relative w-full overflow-hidden pointer-events-none -mb-8 h-8">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-16 bg-primary/20 blur-2xl rounded-full"></div>
+</div>
+<!-- Greeting & Profile Vibe Bar -->
+<div class="flex items-center justify-between w-full">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Welcome back, Alex!</span>
+<span class="text-xl animate-bounce">🔥</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">3 automated pipelines running at peak efficiency</p>
+</div>
+<button aria-label="Notifications" class="w-9 h-9 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</button>
+</div>
+<!-- Horizontal Scrollable Stat Pills Banner -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-0.5 -mx-margin-mobile px-margin-mobile">
+<!-- Credit Pill -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px] animate-pulse">bolt</span>
+<span class="font-readout-num text-readout-num text-on-surface font-semibold">45</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">CREDITS</span>
+<a class="ml-1 bg-primary-container text-on-primary font-label-pill text-label-pill px-2 py-0.5 rounded-full shadow-sm hover:brightness-110 active:scale-95 transition-all" data-path="credits" href="#">
+        + Buy
+      </a>
+</div>
+<!-- Clips Created Pill -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-primary text-[16px]">content_cut</span>
+<span class="font-readout-num text-readout-num text-on-surface font-semibold">14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Clips this week</span>
+</div>
+<!-- Total Views Pill -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[16px]">visibility</span>
+<span class="font-readout-num text-readout-num text-on-surface font-semibold">384K</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Views</span>
+</div>
+</div>
+<!-- Quick Hero Link Extraction Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Specular accent -->
+<div class="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-primary via-secondary to-primary-container opacity-70"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">magic_button</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Auto-Extract Clips</span>
+</div>
+<span class="font-label-mono text-label-mono text-secondary uppercase bg-secondary/10 px-2 py-0.5 rounded-full">Fast Engine</span>
+</div>
+<!-- Link Input -->
+<div class="flex flex-col gap-1.5">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant/70 text-[20px]">smart_display</span>
+<input class="w-full pl-10 pr-10 py-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm outline-none shadow-inner transition-all focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(76,215,246,0.35)]" id="urlInput" placeholder="Paste YouTube, Vimeo or MP4 URL..." type="url">
+<button class="absolute right-2 text-secondary hover:text-secondary-fixed p-1 rounded transition-colors" id="pasteBtn" title="Paste clipboard">
+<span class="material-symbols-outlined text-[18px]">content_paste</span>
+</button>
+</div>
+<!-- File Upload Toggle Alternative -->
+<div class="flex items-center justify-between px-1">
+<span class="font-label-mono text-[11px] text-on-surface-variant/70">OR DROP LOCAL FILE</span>
+<button class="flex items-center gap-1 font-label-pill text-label-pill text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[15px]">upload_file</span>
+<span class="">Upload File (Up to 4GB)</span>
+</button>
+</div>
+</div>
+<!-- Engine Preset Selector Selector Bar -->
+<div class="bg-surface-container-lowest p-2 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-6 h-6 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[15px]">psychology</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-[12px] font-medium text-on-surface truncate">ClipFlow Whisper + FaceDetect</span>
+<span class="font-label-mono text-[10px] text-on-surface-variant">v2.4 Neural Crop &amp; Subtitles</span>
+</div>
+</div>
+<button class="shrink-0 p-1 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Generation Trigger CTA Button -->
+<button class="w-full py-3 px-space-md rounded-lg bg-primary-container text-on-primary font-headline-md text-headline-md font-bold flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(124,58,237,0.35)] hover:shadow-[0_6px_24px_rgba(124,58,237,0.5)] active:scale-[0.99] transition-all" id="extractCta">
+<span class="material-symbols-outlined text-[20px] text-primary">bolt</span>
+<span class="">Generate Viral Clips</span>
+<span class="font-label-mono text-[11px] bg-primary/20 text-on-primary-container px-2 py-0.5 rounded-full ml-1 font-semibold">3 CR</span>
+</button>
+</div>
+<!-- Processing Queue / Active Job Section -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-secondary animate-ping"></div>
+<span class="font-label-mono text-label-mono uppercase text-secondary font-semibold tracking-wider">Active Job (1/1)</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">EST. REMAINING: 42s</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-start justify-between gap-2">
+<div class="flex gap-space-sm min-w-0">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close up podcast studio capture of Joe Rogan speaking into a classic Shure SM7B microphone with dark neon atmospheric lighting in Electric Violet and Cyber Cyan tones, high fidelity media snapshot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxb2DueTllCh9qcr8W_c5gJYtbwJXtqAazRNAbEjdCYDAffFeV_LFuWwKtVjXCUbQal84PLA5bRvs7eoR5TtTQ4QL-CE8QUnW9a5hiHnrYJTO6d76_M8oGjkWh3MMNYJMPbG0-Y6ZyE3TQb27NuWLcO8iiFsPvsLuAjNg1pcOo9ckObLEZVQj3vOXJqpuKP0IfUY6WOnXHLPZKMbZVENuTNKV0JKwqP8yCTBZZQ6ho9oVgpUIDX0h0">
+<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[22px] animate-spin">progress_activity</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold truncate">Joe Rogan Experience #2180</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-body-sm text-[12px] text-secondary font-medium">Extracting AI Hooks</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="font-label-mono text-[11px] text-on-surface-variant">Step 2 of 4</span>
+</div>
+<span class="font-label-mono text-[10px] text-tertiary-fixed-dim">Detected 7 high-virality spikes</span>
+</div>
+</div>
+<span class="font-readout-num text-readout-num text-secondary font-bold">68%</span>
+</div>
+<!-- Animated Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden relative mt-1">
+<div class="h-full bg-gradient-to-r from-secondary-container via-secondary to-primary-container rounded-full w-[68%] transition-all duration-500 relative">
+<div class="absolute inset-0 bg-surface-bright/20 animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Projects Section Header -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">history</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Recent Projects</span>
+</div>
+<a class="font-label-pill text-label-pill text-secondary hover:underline flex items-center" data-path="projects-dashboard" href="#">
+      View All (18)
+      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Recent Projects List (3 Cards) -->
+<div class="flex flex-col gap-space-sm">
+<!-- Project 1: All-In Podcast -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex gap-space-sm">
+<!-- Thumbnail Container -->
+<div class="relative w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Modern tech podcast studio scene with hosts discussing AI agent automation, rich ambient dark studio aesthetic, cinematic rim lighting in violet and cyan, professional multi-camera broadcast capture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq7NfZ_gEbB-1HFYT4N11QDn0FPBjN1JFsewZeJeOt7s87GPyVyzeZuTmguh3BOdsmzX7BODfrojGiKYBaULW8yqbRqCZXiMMgF8kntW3WrPg-stAaHBJRVjbLtJrvyf5ut-8Vn55unQ_bOXkLMF77h98M9moCH4XW23-ncjmcUJwGrXjX8hjRRzES9MljbGZRLiBD7uRwG2gGhXxVd7zMQmqvtZ-Dk8R99HDTKpgowHXYlFeCzA4v">
+<div class="absolute top-1 left-1 bg-surface-container-lowest/80 backdrop-blur-sm px-1.5 py-0.5 rounded font-label-mono text-[9px] text-on-surface">
+            1:18:20
+          </div>
+<div class="absolute bottom-1 right-1 bg-tertiary-container/90 px-1.5 py-0.2 rounded font-label-mono text-[9px] text-on-tertiary-container font-semibold">
+            12 CLIPS
+          </div>
+</div>
+<!-- Project Details -->
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-mono text-[10px] text-on-surface-variant">2h ago</span>
+<!-- Viral Badge -->
+<span class="bg-tertiary-container/30 text-tertiary-fixed-dim font-label-mono text-[10px] font-bold px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">local_fire_department</span>
+                96% VIRAL
+              </span>
+</div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2 mt-0.5 leading-snug">
+              All-In Podcast Ep 174: AI Agents Revolution
+            </h3>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-[12px]">
+<span class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Ready
+            </span>
+<span class="">•</span>
+<span class="font-label-mono text-[11px]">9:16 Shorts</span>
+</div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex items-center gap-space-xs pt-1">
+<a class="flex-1 py-1.5 px-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-label-pill text-label-pill flex items-center justify-center gap-1.5 transition-colors" data-path="studio-workspace" href="#">
+<span class="material-symbols-outlined text-[16px] text-secondary">movie_edit</span>
+          Open in Studio
+        </a>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" title="Quick Download All">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" title="Share Project">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</button>
+</div>
+</div>
+<!-- Project 2: Lex Fridman & Sam Altman -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex gap-space-sm">
+<!-- Thumbnail Container -->
+<div class="relative w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Lex Fridman sitting opposite Sam Altman in an iconic minimalist black interview studio with spotlighting, high contrast cinematic digital video style with subtle cyber cyan reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97O1JUbEbiH7q0F_Fx9e6cgYmhBPtEMmESPjmq_gpfYWB4F-Y0Jo7nnxTSJ9hn_w8NfYnlkI0krDKnzvYVkU20wYrIcrIiG7LFdq5bIlFgdiTfe_u_ORDRV8jDPZ6FXSnDtVKviUTFfalYaH_VjWI9ZKjDLo8vyEeILGZRoMOp4uOTkCwF9g8S7cVab_CcQVPMBsLzLa03bNg6csn9S-5XBM_SPCIlH5iPLM1fmrVaArySZizoL8d">
+<div class="absolute top-1 left-1 bg-surface-container-lowest/80 backdrop-blur-sm px-1.5 py-0.5 rounded font-label-mono text-[9px] text-on-surface">
+            2:04:12
+          </div>
+<div class="absolute bottom-1 right-1 bg-tertiary-container/90 px-1.5 py-0.2 rounded font-label-mono text-[9px] text-on-tertiary-container font-semibold">
+            8 CLIPS
+          </div>
+</div>
+<!-- Project Details -->
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-mono text-[10px] text-on-surface-variant">Yesterday</span>
+<!-- Viral Badge -->
+<span class="bg-tertiary-container/30 text-tertiary-fixed-dim font-label-mono text-[10px] font-bold px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">local_fire_department</span>
+                91% VIRAL
+              </span>
+</div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2 mt-0.5 leading-snug">
+              Lex Fridman &amp; Sam Altman: Future of Compute
+            </h3>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-[12px]">
+<span class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Ready
+            </span>
+<span class="">•</span>
+<span class="font-label-mono text-[11px]">Auto B-Roll</span>
+</div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex items-center gap-space-xs pt-1">
+<a class="flex-1 py-1.5 px-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-label-pill text-label-pill flex items-center justify-center gap-1.5 transition-colors" data-path="studio-workspace" href="#">
+<span class="material-symbols-outlined text-[16px] text-secondary">movie_edit</span>
+          Open in Studio
+        </a>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" title="Quick Download All">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" title="Share Project">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</button>
+</div>
+</div>
+<!-- Project 3: MKBHD The M4 Max Review -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex gap-space-sm">
+<!-- Thumbnail Container -->
+<div class="relative w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="MKBHD studio tech review table setup showcasing sleek futuristic laptop hardware under crisp robotic studio lights with deep matte shadows and clean tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT4pVLrIcwn3ozSoR44ttxoh4OgDGDk6HT52T-cYKlo4fAVVZR8DaXvPqV0DQ0GGor5yPe-xnnrDtKxBb0oqfrNRcn0NxYLU1MA00WihaOR8D6qsLaSwUUjjRdcZtYr5zdodtMVp326YeLlKzWQ08V-FXh8kR4UydEK1s6dXZOx51HuAxpZuLf0CxneeP3Og371yBfx6b3xrUQJqj7NcuTy2HdiEUNfj6u4NKU76BQtD3MLPEIkOB-">
+<div class="absolute top-1 left-1 bg-surface-container-lowest/80 backdrop-blur-sm px-1.5 py-0.5 rounded font-label-mono text-[9px] text-on-surface">
+            18:45
+          </div>
+<div class="absolute bottom-1 right-1 bg-tertiary-container/90 px-1.5 py-0.2 rounded font-label-mono text-[9px] text-on-tertiary-container font-semibold">
+            6 CLIPS
+          </div>
+</div>
+<!-- Project Details -->
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-mono text-[10px] text-on-surface-variant">3 days ago</span>
+<!-- Viral Badge -->
+<span class="bg-tertiary-container/30 text-tertiary-fixed-dim font-label-mono text-[10px] font-bold px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">local_fire_department</span>
+                88% VIRAL
+              </span>
+</div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2 mt-0.5 leading-snug">
+              MKBHD: The M4 Max Review &amp; Benchmarks
+            </h3>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-[12px]">
+<span class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Ready
+            </span>
+<span class="">•</span>
+<span class="font-label-mono text-[11px]">Kinetic Captions</span>
+</div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex items-center gap-space-xs pt-1">
+<a class="flex-1 py-1.5 px-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-label-pill text-label-pill flex items-center justify-center gap-1.5 transition-colors" data-path="studio-workspace" href="#">
+<span class="material-symbols-outlined text-[16px] text-secondary">movie_edit</span>
+          Open in Studio
+        </a>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" title="Quick Download All">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" title="Share Project">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Micro-Tip Delight Card -->
+<div class="w-full bg-gradient-to-r from-surface-container-low to-surface-container p-space-sm rounded-xl flex items-center gap-space-sm mt-1">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">tips_and_updates</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-pill text-label-pill text-on-surface font-semibold">Pro Creator Tip</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">ClipFlow Whisper + FaceDetect</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const pasteBtn = document.getElementById('pasteBtn');
+    const urlInput = document.getElementById('urlInput');
+    const extractCta = document.getElementById('extractCta');
+
+    if (pasteBtn && urlInput) {
+      pasteBtn.addEventListener('click', async () => {
+        try {
+          const text = await navigator.clipboard.readText();
+          if (text) {
+            urlInput.value = text;
+            urlInput.focus();
+          }
+        } catch (err) {
+          urlInput.value = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+        }
+      });
+    }
+
+    if (extractCta && urlInput) {
+      extractCta.addEventListener('click', () => {
+        if (!urlInput.value) {
+          urlInput.value = 'https://youtu.be/sample-podcast-ai';
+        }
+        extractCta.classList.add('scale-95');
+        setTimeout(() => extractCta.classList.remove('scale-95'), 150);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="home-showcase" href="#"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Explore</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-secondary" data-path="projects-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">video_library</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Projects</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="studio-workspace" href="#"><span class="material-symbols-outlined text-[24px]">movie_edit</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Studio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="credits" href="#"><span class="material-symbols-outlined text-[24px]">bolt</span><span class="font-label-pill text-label-pill tracking-tight mt-0.5">Credits</span></a></div></nav>
+
+<script>
+document.getElementById('logout-btn')?.addEventListener('click', () => {
+    fetch('/api/auth/logout', {method: 'POST'}).then(() => location.href = '/');
+});
+</script>
+</body></html>

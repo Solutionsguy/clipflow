@@ -1,0 +1,57 @@
+# Video and media files
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.avi
+*.gif
+
+# Node dependencies & builds
+node_modules/
+dashboard/node_modules/
+render-service/node_modules/
+dist/
+dashboard/dist/
+
+# Python virtual environments & bytecode
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Databases & local logs
+*.db
+*.sqlite3
+logs/
+*.log
+
+# Temporary files & runtime outputs
+temp_*
+uploads/
+downloads/
+videos/
+output/
+thumbnails/
+
+# OS & IDE files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets & Environment variables
+.env
+.env.local
+.env.production
+
+# Vercel & AI agents
+.vercel
+.agents/
+.agent/
+.claude/
+skills/
+skills-lock.json

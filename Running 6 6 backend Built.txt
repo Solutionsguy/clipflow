@@ -1,0 +1,738 @@
+] Running 6/6
+ ✔ backend                        Built                                                                      0.0s 
+ ✔ frontend                       Built                                                                      0.0s 
+ ✔ renderer                       Built                                                                      0.0s 
+ ✔ Container openshorts-backend   Recreated                                                                  5.1s 
+ ✔ Container openshorts-renderer  Recreated                                                                  0.8s 
+ ✔ Container openshorts-frontend  Recreated                                                                  0.8s 
+Attaching to openshorts-backend, openshorts-frontend, openshorts-renderer
+openshorts-frontend  | 
+openshorts-frontend  | > openshorts-app@0.0.0 dev
+openshorts-frontend  | > vite --host
+openshorts-frontend  | 
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-frontend  | 
+openshorts-frontend  |   VITE v4.5.14  ready in 833 ms
+openshorts-frontend  | 
+openshorts-frontend  |   ➜  Local:   http://localhost:5173/
+openshorts-frontend  |   ➜  Network: http://172.18.0.3:5173/
+openshorts-backend exited with code 1 (restarting)
+openshorts-renderer  | [render-service] Initializing Remotion bundle...
+openshorts-renderer  | [bundle] Bundling Remotion project from: /app/remotion/src/index.ts
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-renderer  | [bundle] Progress: 70%
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-renderer  | [bundle] Progress: 100%
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-renderer  | [bundle] Bundle created at: /tmp/remotion-webpack-bundle-nOQUUo
+openshorts-renderer  | [render-service] Bundle ready.
+openshorts-renderer  | [render-service] Listening on port 3100
+openshorts-backend exited with code 1 (restarting)
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-frontend  | Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+openshorts-frontend  |   npx update-browserslist-db@latest
+openshorts-frontend  |   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+openshorts-backend   | Traceback (most recent call last):
+openshorts-backend   |   File "/opt/venv/bin/uvicorn", line 6, in <module>
+openshorts-backend   |     sys.exit(main())
+openshorts-backend   |              ^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+openshorts-backend   |     return self.main(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+openshorts-backend   |     rv = self.invoke(ctx)
+openshorts-backend   |          ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+openshorts-backend   |     return ctx.invoke(self.callback, **ctx.params)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+openshorts-backend   |     return callback(*args, **kwargs)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 441, in main
+openshorts-backend   |     run(
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/main.py", line 617, in run
+openshorts-backend   |     server.run()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+openshorts-backend   |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+openshorts-backend   |     return runner.run(main)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+openshorts-backend   |     return self._loop.run_until_complete(task)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+openshorts-backend   |     return future.result()
+openshorts-backend   |            ^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 79, in serve
+openshorts-backend   |     await self._serve(sockets)
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/server.py", line 86, in _serve
+openshorts-backend   |     config.load()
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/config.py", line 449, in load
+openshorts-backend   |     self.loaded_app = import_from_string(self.app)
+openshorts-backend   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string
+openshorts-backend   |     raise exc from None
+openshorts-backend   |   File "/opt/venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+openshorts-backend   |     module = importlib.import_module(module_str)
+openshorts-backend   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+openshorts-backend   |     return _bootstrap._gcd_import(name[level:], package, level)
+openshorts-backend   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+openshorts-backend   |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+openshorts-backend   |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+openshorts-backend   |   File "/app/app.py", line 19, in <module>
+openshorts-backend   |     from auth import router as auth_router
+openshorts-backend   |   File "/app/auth.py", line 8, in <module>
+openshorts-backend   |     from jose import JWTError, jwt
+openshorts-backend   | ModuleNotFoundError: No module named 'jose'
+openshorts-backend exited with code 1 (restarting)
+
+
+
