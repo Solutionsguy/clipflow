@@ -7,15 +7,15 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://YOUR_BACKEND_URL/api/$1"
+      "destination": "https://clipflow-nn5p.onrender.com/api/$1"
     },
     {
       "source": "/videos/(.*)",
-      "destination": "https://YOUR_BACKEND_URL/videos/$1"
+      "destination": "https://clipflow-nn5p.onrender.com/videos/$1"
     },
     {
       "source": "/thumbnails/(.*)",
-      "destination": "https://YOUR_BACKEND_URL/thumbnails/$1"
+      "destination": "https://clipflow-nn5p.onrender.com/thumbnails/$1"
     },
     {
       "source": "/(.*)",

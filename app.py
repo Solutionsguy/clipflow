@@ -200,6 +200,15 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 def csrf_protect_exception_handler(request: Request, exc: CsrfProtectError):
     return JSONResponse(status_code=exc.status_code, content={"detail": exc.message})
 
+@app.get("/")
+def root():
+    return {
+        "service": "Clipflow Backend API",
+        "status": "online",
+        "health": "/health",
+        "docs": "/docs"
+    }
+
 @app.get("/health")
 @app.get("/api/health")
 def health_check():
