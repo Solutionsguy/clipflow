@@ -1,9 +1,11 @@
+import os
 import json
 import logging
 from fastapi import APIRouter, Request
 
 router = APIRouter(prefix="/api/telemetry", tags=["telemetry"])
 
+os.makedirs('logs', exist_ok=True)
 logging.basicConfig(level=logging.INFO, filename='logs/telemetry.log', filemode='a',
                     format='%(asctime)s - %(message)s')
 

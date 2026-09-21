@@ -46,9 +46,9 @@ COPY . .
 # Create a non-root user (Moved up)
 RUN groupadd -r appuser && useradd -r -g appuser -d /app -s /sbin/nologin appuser
 
-# Create directories including Ultralytics cache config
-RUN mkdir -p /app/uploads /app/output /tmp/Ultralytics
-# Fix permissions: /app for code/uploads, /tmp/Ultralytics for AI cache
+# Create directories including logs and Ultralytics cache config
+RUN mkdir -p /app/uploads /app/output /app/logs /tmp/Ultralytics
+# Fix permissions: /app for code/uploads/logs, /tmp/Ultralytics for AI cache
 RUN chown -R appuser:appuser /app /tmp/Ultralytics
 
 # Switch to non-root user
